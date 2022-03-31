@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DetectionCollider : MonoBehaviour
 {
+    [SerializeField] private int sceneIndex;
     void Start()
     {
         
@@ -18,7 +19,7 @@ public class DetectionCollider : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(sceneIndex);
         }
     }
    

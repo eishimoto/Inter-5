@@ -6,7 +6,10 @@ public class EnemyMove : MonoBehaviour
 {
     [SerializeField] private float m_MoveSpeed = 3;
     [SerializeField] private float m_time = 3;
-
+    [SerializeField] private Vector3 m_Direction1;
+    [SerializeField] private Vector3 m_Direction2;
+    [SerializeField] private Vector3 m_Direction3;
+    [SerializeField] private Vector3 m_Direction4;
     DetectionCollider DetectionCollider;
     void Start()
     {
@@ -17,7 +20,7 @@ public class EnemyMove : MonoBehaviour
         float time = Time.time + m_time;
         while (time > Time.time)
         {
-            Vector3 move = Vector3.forward * m_MoveSpeed * Time.deltaTime;
+            Vector3 move = m_Direction1 * m_MoveSpeed * Time.deltaTime;
             transform.Translate(move);
            
             yield return null;
@@ -29,7 +32,7 @@ public class EnemyMove : MonoBehaviour
         float time = Time.time + m_time;
         while (time > Time.time)
         {
-            Vector3 move = Vector3.right * m_MoveSpeed * Time.deltaTime;
+            Vector3 move = m_Direction2 * m_MoveSpeed * Time.deltaTime;
             transform.Translate(move);
             
             yield return null;
@@ -41,7 +44,7 @@ public class EnemyMove : MonoBehaviour
         float time = Time.time + m_time;
         while (time > Time.time)
         {
-            Vector3 move = Vector3.forward * -1 * m_MoveSpeed * Time.deltaTime;
+            Vector3 move = m_Direction3 * m_MoveSpeed * Time.deltaTime;
             transform.Translate(move);
    
             yield return null;
@@ -53,7 +56,7 @@ public class EnemyMove : MonoBehaviour
         float time = Time.time + m_time;
         while (time > Time.time)
         {
-            Vector3 move = Vector3.left * m_MoveSpeed * Time.deltaTime;
+            Vector3 move = m_Direction4 * m_MoveSpeed * Time.deltaTime;
             transform.Translate(move);
 
             yield return null;

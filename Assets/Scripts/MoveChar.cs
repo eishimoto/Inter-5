@@ -49,7 +49,7 @@ public class MoveChar : MonoBehaviour
         if(myJumping && mySpeedY < 0)
         {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, Vector3.down, out hit, 1f, LayerMask.GetMask("Ground")))
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, 0.5f, LayerMask.GetMask("Ground")))
             {
                 myJumping = false;
             }
