@@ -5,16 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class LoadLevel : MonoBehaviour
 {
-    public int number;
+    [SerializeField]private int number;
+
     void Start()
     {
-        
     }
 
-    // Update is called once per frame
+  
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -24,4 +24,6 @@ public class LoadLevel : MonoBehaviour
             SceneManager.LoadScene(number);
         }
     }
+
+   
 }
