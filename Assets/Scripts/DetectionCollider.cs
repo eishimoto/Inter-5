@@ -16,12 +16,7 @@ public class DetectionCollider : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            SceneManager.LoadScene(sceneIndex);
         }
-    }
-
-    IEnumerator LoadScene()
-    {
-        yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(sceneIndex);
     }
 }
