@@ -6,21 +6,22 @@ using UnityEngine.SceneManagement;
 public class DetectionCollider : MonoBehaviour
 {
     [SerializeField] private int sceneIndex;
-    void Start()
+
+    public Checkpoint Checkpoint;
+    private void Awake()
     {
-        
     }
 
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(sceneIndex);
         }
     }
-   
+
+    IEnumerator LoadScene()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(sceneIndex);
+    }
 }

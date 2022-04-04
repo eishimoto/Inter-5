@@ -30,10 +30,11 @@ public class MoveChar : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float z = Input.GetAxisRaw("Vertical");
 
-        if(Input.GetKey(KeyCode.Space) && !myJumping)
+        if(Input.GetButtonDown("Jump") && !myJumping)
         {
             myJumping = true;
-            mySpeedY += jumpForce;
+            mySpeedY = 0;
+            mySpeedY += Mathf.Sqrt(jumpForce  * -2 * myGravity);
         }
 
         if (!controller.isGrounded)
