@@ -8,23 +8,9 @@ public class Checkpoint : MonoBehaviour
   
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Checkpoint"))
+        if (other.gameObject.tag == "Player")
         {
-            lastPosition = gameObject.transform.position;
-            Debug.Log(lastPosition.ToString());
-            Debug.Log(gameObject.transform.position.ToString());
+            lastPosition = other.transform.position;
         }
-
-        if(other.gameObject.CompareTag("Respawn"))
-        {
-            StartCoroutine(loadLastPostition());      
-        }
-    }
-
-    IEnumerator loadLastPostition()
-    {
-        yield return new WaitForSeconds(.5f);
-        gameObject.transform.position = lastPosition;
-        Debug.Log("hit");
     }
 }

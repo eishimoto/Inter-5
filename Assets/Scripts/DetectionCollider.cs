@@ -7,7 +7,6 @@ public class DetectionCollider : MonoBehaviour
 {
     [SerializeField] private int sceneIndex;
 
-    public Checkpoint Checkpoint;
     private void Awake()
     {
     }
