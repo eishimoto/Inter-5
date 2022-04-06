@@ -53,7 +53,7 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: 59
+    value: 66
   tint:
     overrideState: 1
     value: 0
@@ -1375,7 +1375,7 @@ MonoBehaviour:
     value: 0
   color:
     overrideState: 1
-    value: {r: 0.4433962, g: 0.1957276, b: 0, a: 1}
+    value: {r: 0.5754717, g: 0.2546335, b: 0, a: 1}
   fastMode:
     overrideState: 1
     value: 0
@@ -1404,7 +1404,7 @@ MonoBehaviour:
     value: 1
   shutterAngle:
     overrideState: 1
-    value: 192
+    value: 261
   sampleCount:
     overrideState: 1
     value: 10
