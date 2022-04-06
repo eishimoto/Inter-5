@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerCheckpoint : MonoBehaviour
 {
-    public GameObject checkpoint;
     Vector3 spawnPosition;
     
     void Start()
@@ -25,7 +24,7 @@ public class PlayerCheckpoint : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Checkpoint"))
         {
-            spawnPosition = checkpoint.transform.position;
+            spawnPosition = other.gameObject.transform.position;
             Debug.Log(spawnPosition.ToString());
         }
     }

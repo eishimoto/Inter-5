@@ -23,6 +23,7 @@ public class MoveChar : MonoBehaviour
     private void Start()
     {
         controller = gameObject.GetComponent<CharacterController>();
+        myJumping = false;
     }
 
     void Update()

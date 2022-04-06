@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1;
     }
 
 
