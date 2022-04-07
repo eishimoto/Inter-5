@@ -8,7 +8,7 @@ public class PlayerCheckpoint : MonoBehaviour
     
     void Start()
     {
-        spawnPosition = gameObject.transform.position;
+        spawnPosition = new Vector3(0,2,0);
         Debug.Log(spawnPosition.ToString());
     }
 
@@ -16,7 +16,7 @@ public class PlayerCheckpoint : MonoBehaviour
     {
         if(gameObject.transform.position.y < -10f)
         {
-            gameObject.transform.position = spawnPosition + new Vector3(2f, 5f, 0);
+            Respawn();
         }
     }
 
@@ -27,5 +27,17 @@ public class PlayerCheckpoint : MonoBehaviour
             spawnPosition = other.gameObject.transform.position;
             Debug.Log(spawnPosition.ToString());
         }
+
+        if (other.gameObject.CompareTag("Respawn"))
+        {
+            Respawn();
+        }
+    }
+
+    private void Respawn()
+    {
+        gameObject.SetActive(false);
+        gameObject.transform.position = spawnPosition + new Vector3(2f, 5f, 0);
+        gameObject.SetActive(true);
     }
 }

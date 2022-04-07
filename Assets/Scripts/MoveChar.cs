@@ -35,7 +35,7 @@ public class MoveChar : MonoBehaviour
         {
             myJumping = true;
             mySpeedY = 0;
-            mySpeedY += Mathf.Sqrt(jumpForce  * -2 * myGravity);
+            mySpeedY += Mathf.Sqrt(jumpForce * -2 * myGravity);
         }
 
         if (!controller.isGrounded)
@@ -47,10 +47,10 @@ public class MoveChar : MonoBehaviour
             mySpeedY = 0;
         }
         
-        if(myJumping && mySpeedY < 0)
+        if(myJumping && mySpeedY <= 0)
         {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, Vector3.down, out hit, 0.5f, LayerMask.GetMask("Ground")))
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, 2f, LayerMask.GetMask("Ground")))
             {
                 myJumping = false;
             }
