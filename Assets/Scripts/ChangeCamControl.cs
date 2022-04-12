@@ -13,6 +13,10 @@ public class ChangeCamControl : MonoBehaviour
     [SerializeField] private Sprite arrowSprites;
     [SerializeField] private Sprite arrowSpritesblack;
 
+    private int currentCam;
+    private int currentArrow;
+
+
     private void Start()
     {
         arrows[0].sprite = arrowSprites;
@@ -23,23 +27,29 @@ public class ChangeCamControl : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.UpArrow))
+        ChangeCamWithOneKey();
+        ChangeCamWithArrows();
+    }
+
+    private void ChangeCamWithArrows()
+    {
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            cam[3].Priority = 1;
-            cam[0].Priority = 0;
-            cam[2].Priority = 0;
-            cam[1].Priority = 0;
+            cam[3].gameObject.SetActive(false);
+            cam[2].gameObject.SetActive(true);
+            cam[1].gameObject.SetActive(false);
+            cam[0].gameObject.SetActive(false);
             arrows[0].sprite = arrowSpritesblack;
             arrows[1].sprite = arrowSpritesblack;
-            arrows[2].sprite = arrowSpritesblack;
-            arrows[3].sprite = arrowSprites;
+            arrows[2].sprite = arrowSprites;
+            arrows[3].sprite = arrowSpritesblack;
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            cam[3].Priority = 0;
-            cam[0].Priority = 1;
-            cam[2].Priority = 0;
-            cam[1].Priority = 0;
+            cam[3].gameObject.SetActive(false);
+            cam[2].gameObject.SetActive(false);
+            cam[1].gameObject.SetActive(false);
+            cam[0].gameObject.SetActive(true);
             arrows[0].sprite = arrowSprites;
             arrows[1].sprite = arrowSpritesblack;
             arrows[2].sprite = arrowSpritesblack;
@@ -47,25 +57,61 @@ public class ChangeCamControl : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            cam[3].Priority = 0;
-            cam[0].Priority = 0;
-            cam[2].Priority = 1;
-            cam[1].Priority = 0;
+            cam[3].gameObject.SetActive(true);
+            cam[2].gameObject.SetActive(false);
+            cam[1].gameObject.SetActive(false);
+            cam[0].gameObject.SetActive(false);
             arrows[0].sprite = arrowSpritesblack;
             arrows[1].sprite = arrowSpritesblack;
-            arrows[2].sprite = arrowSprites;
-            arrows[3].sprite = arrowSpritesblack;
+            arrows[2].sprite = arrowSpritesblack;
+            arrows[3].sprite = arrowSprites;
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            cam[3].Priority = 0;
-            cam[0].Priority = 0;
-            cam[2].Priority = 0;
-            cam[1].Priority = 1;
+            cam[3].gameObject.SetActive(false);
+            cam[2].gameObject.SetActive(false);
+            cam[1].gameObject.SetActive(true);
+            cam[0].gameObject.SetActive(false);
             arrows[0].sprite = arrowSpritesblack;
             arrows[1].sprite = arrowSprites;
             arrows[2].sprite = arrowSpritesblack;
             arrows[3].sprite = arrowSpritesblack;
+        }
+    }
+    
+    private void ChangeCamWithOneKey()
+    {
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            currentCam++;
+            if (currentCam < cam.Length)
+            {
+                cam[currentCam - 1].gameObject.SetActive(false);
+                cam[currentCam].gameObject.SetActive(true);
+            }
+            else
+            {
+                cam[currentCam - 1].gameObject.SetActive(false);
+                currentCam = 0;
+                cam[currentCam].gameObject.SetActive(true);
+            }
+
+            foreach (var item in arrows)
+            {
+                item.sprite = arrowSpritesblack;
+            }
+            currentArrow++;
+            if(currentArrow < arrows.Length)
+            {
+                arrows[currentArrow - 1].sprite = arrowSpritesblack;
+                arrows[currentArrow].sprite = arrowSprites;
+            }
+            else
+            {
+                arrows[currentArrow - 1].sprite = arrowSpritesblack;
+                currentArrow = 0;
+                arrows[currentArrow].sprite = arrowSprites;
+            }
         }
     }
 }
