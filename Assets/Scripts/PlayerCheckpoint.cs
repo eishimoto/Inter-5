@@ -5,11 +5,12 @@ using UnityEngine;
 public class PlayerCheckpoint : MonoBehaviour
 {
     Vector3 spawnPosition;
-    
+    public Vector3 inicialPostion;
     void Start()
     {
-        spawnPosition = new Vector3(0,2,0);
+        spawnPosition = inicialPostion;
         Debug.Log(spawnPosition.ToString());
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
@@ -24,7 +25,7 @@ public class PlayerCheckpoint : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Checkpoint"))
         {
-            spawnPosition = other.gameObject.transform.position;
+            spawnPosition = other.gameObject.transform.position + new Vector3(2, 0, 0);
             Debug.Log(spawnPosition.ToString());
         }
 
@@ -37,7 +38,7 @@ public class PlayerCheckpoint : MonoBehaviour
     private void Respawn()
     {
         gameObject.SetActive(false);
-        gameObject.transform.position = spawnPosition + new Vector3(2f, 5f, 0);
+        gameObject.transform.position = spawnPosition + new Vector3(0, 2f, 0);
         gameObject.SetActive(true);
     }
 }
