@@ -25,7 +25,7 @@ MonoBehaviour:
     defaultState: 1
   tonemapper:
     overrideState: 1
-    value: 2
+    value: 1
   toneCurveToeStrength:
     overrideState: 1
     value: 0
@@ -1433,7 +1433,7 @@ MonoBehaviour:
     value: 1.05
   softKnee:
     overrideState: 1
-    value: 0.5
+    value: 0.583
   clamp:
     overrideState: 1
     value: 65472
@@ -1487,7 +1487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94fcd11afffcb142908bfcb1e261fba, type: 3}
   m_Name: MotionBlur
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1

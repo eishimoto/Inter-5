@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using UnityEngine.UI;
+using UnityEngine.Rendering.PostProcessing;
 
 public class ChangeCamControl : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class ChangeCamControl : MonoBehaviour
     [SerializeField] private Image []arrows;
     [SerializeField] private Sprite arrowSprites;
     [SerializeField] private Sprite arrowSpritesblack;
+
+    [SerializeField] PostProcessVolume volume;
 
     private int currentCam;
     private int currentArrow;
@@ -29,6 +32,7 @@ public class ChangeCamControl : MonoBehaviour
     {
         ChangeCamWithOneKey();
         ChangeCamWithArrows();
+        ChangeColors();
     }
 
     private void ChangeCamWithArrows()
@@ -111,6 +115,19 @@ public class ChangeCamControl : MonoBehaviour
                 arrows[currentArrow - 1].sprite = arrowSpritesblack;
                 currentArrow = 0;
                 arrows[currentArrow].sprite = arrowSprites;
+            }
+        }
+    }
+
+    private void ChangeColors()
+    {
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            volume.profile.TryGetSettings(out ColorGrading colorGrading);
+            
+            if(colorGrading)
+            {
+                colorGrading.active = !colorGrading.active;
             }
         }
     }
