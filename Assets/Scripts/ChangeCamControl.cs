@@ -15,6 +15,7 @@ public class ChangeCamControl : MonoBehaviour
     [SerializeField] private Sprite arrowSpritesblack;
 
     [SerializeField] PostProcessVolume volume;
+    [SerializeField] private GameObject[] colorObjs;
 
     private int currentCam;
     private int currentArrow;
@@ -128,6 +129,11 @@ public class ChangeCamControl : MonoBehaviour
             if(colorGrading)
             {
                 colorGrading.active = !colorGrading.active;
+
+                for (int i = 0; i < colorObjs.Length; i++)
+                {
+                    colorObjs[i].SetActive(!colorObjs[i].activeSelf);
+                }
             }
         }
     }

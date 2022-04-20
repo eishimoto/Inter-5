@@ -7,6 +7,7 @@ TagManager:
   - UpdateScore
   - Checkpoint
   - wall
+  - ColorChangeBullet
   layers:
   - Default
   - TransparentFX
