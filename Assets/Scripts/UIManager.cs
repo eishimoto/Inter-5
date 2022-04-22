@@ -42,7 +42,7 @@ public class UIManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void RestartGame()
+    public void LoadMenu()
     {
         SceneManager.LoadScene(0);
     }
