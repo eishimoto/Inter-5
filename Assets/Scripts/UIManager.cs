@@ -7,12 +7,14 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseScreen;
     private bool isPaused;
+
+    [SerializeField] private GameObject textBox;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1;
+        StartCoroutine(TextBox());
     }
-
 
     void Update()
     {
@@ -45,5 +47,11 @@ public class UIManager : MonoBehaviour
     public void LoadMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    IEnumerator TextBox()
+    {
+        yield return new WaitForSeconds(2);
+        textBox.SetActive(true);
     }
 }
