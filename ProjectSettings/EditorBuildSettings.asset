@@ -9,9 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/menu.unity
     guid: be3136c2acf3b1642a10945c7c88f840
   - enabled: 1
-    path: Assets/Scenes/Proto Leleu.unity
+    path: Assets/Scenes/Proto Lisbela 1.unity
+    guid: a1eea6bc13aadfb40b838607d9529e50
+  - enabled: 1
+    path: Assets/Scenes/Proto Leleu 2.unity
     guid: 7d743bf18ab62774897b3d49e2d385ce
   - enabled: 1
-    path: Assets/Scenes/Proto Lisbela.unity
-    guid: a1eea6bc13aadfb40b838607d9529e50
+    path: Assets/Scenes/TestingLisbela 3.unity
+    guid: e8b9b562b9218f44ea8b3466452ab066
+  - enabled: 1
+    path: Assets/Scenes/Testing 4.unity
+    guid: 054098072ed1b094c953ca2136044caf
+  - enabled: 1
+    path: Assets/Scenes/TestingLisbela 5.unity
+    guid: aee2e2abe6fc6f149bfcc5f1cbe9ecbd
+  - enabled: 1
+    path: Assets/Scenes/Testing 6.unity
+    guid: ce3bedfcd351da6488bf56be76d996e1
   m_configObjects: {}

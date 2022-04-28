@@ -15,6 +15,10 @@ public class PotionCollectable : MonoBehaviour
         updateScore = GameObject.Find("ScoreUpdate").GetComponent<UpdateScore>();
     }
 
+    private void Update()
+    {
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
