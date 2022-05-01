@@ -12,7 +12,7 @@ public class PlayerPotionCollectionCount : MonoBehaviour
     
     void Start()
     {
-     
+       count = 0;
     }
     void Update()
     {

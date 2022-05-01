@@ -16,8 +16,6 @@ public class FinalGame : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(index);
-            
             if (LisbelaLevelOne)
             {
                 ProgrssionManager.leleuFirstLevel = true;
@@ -30,7 +28,8 @@ public class FinalGame : MonoBehaviour
             {
                 ProgrssionManager.leleuThirdLevel = true;
             }
-
+            
+            SceneManager.LoadScene(index);
         }
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCheckpoint : MonoBehaviour
 {
@@ -28,10 +29,16 @@ public class PlayerCheckpoint : MonoBehaviour
             spawnPosition = other.gameObject.transform.position + new Vector3(2, 0, 0);
             Debug.Log(spawnPosition.ToString());
         }
+        if (other.gameObject.CompareTag("DetectionArea"))
+        {
+            EnemyMoveBehavior.isDetected = true;
+            Debug.Log(EnemyMoveBehavior.isDetected);
+        }
 
         if (other.gameObject.CompareTag("Respawn"))
         {
-            Respawn();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            EnemyMoveBehavior.isDetected = false;
         }
     }
 

@@ -9,6 +9,7 @@ TagManager:
   - wall
   - ColorChangeBullet
   - Potion
+  - DetectionArea
   layers:
   - Default
   - TransparentFX

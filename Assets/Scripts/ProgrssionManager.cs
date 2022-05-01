@@ -26,15 +26,11 @@ public class ProgrssionManager : MonoBehaviour
         {
             instance = this;
         }
-        PlayerPrefsSave();
     }
 
     private void Start()
     {
-        if(PlayerPrefs.HasKey("currentLevel"))
-        {
-            currentlevel = PlayerPrefs.GetInt("currentlevel");
-        }
+        currentlevel = PlayerPrefs.GetInt("currentlevel");
     }
 
     void Update()
@@ -42,8 +38,7 @@ public class ProgrssionManager : MonoBehaviour
         ConditionToEnableLevels();
         ConditionToEnableLevels2();
         PlayerPrefsSave();
-        ResetBooleans();
-        Debug.Log(currentlevel);
+        DeletePlayerProgression();
     }
 
     private void ConditionToEnableLevels()
@@ -136,30 +131,26 @@ public class ProgrssionManager : MonoBehaviour
             lisbelasButtons[1].SetActive(true);
             leleusButtons[2].SetActive(true);
         }
+        if(currentlevel == 0)
+        {
+            leleusButtons[0].SetActive(false);
+            lisbelasButtons[0].SetActive(false);
+            leleusButtons[1].SetActive(false);
+            lisbelasButtons[1].SetActive(false);
+            leleusButtons[2].SetActive(false);
+        }
 
         PlayerPrefs.SetInt("currentlevel", currentlevel);
     }
 
     private void DeletePlayerProgression()
     {
-        if (Input.GetKeyDown(KeyCode.Delete))
+        if (Input.GetKeyDown(KeyCode.End))
         {
-            PlayerPrefs.DeleteAll();
+            currentlevel = 0;
         }
     }
-
-    private void ResetBooleans()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            leleuFirstLevel = false;
-            leleuSecondLevel = false;
-            leleuThirdLevel = false;
-            lisbelaSecondLevel = false;
-            lisbelaThirdLevel = false;
-        }
-    }
-
+    
     private void OnDisable()
     {
         PlayerPrefs.SetInt("currentlevel", currentlevel);
