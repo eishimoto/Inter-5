@@ -34,7 +34,6 @@ public class ColorChangePower : MonoBehaviour
             usedPower = true;
             CanUSePower = false;
             CanfillPower = false;
-            powerBar.fillAmount = 0;
         }
     }
     private void PostProcessingWight()
@@ -42,6 +41,7 @@ public class ColorChangePower : MonoBehaviour
         if (volume.weight > 0 && usedPower)
         {
             volume.weight -= 0.7f * Time.deltaTime;
+            powerBar.fillAmount -= 0.7f * Time.deltaTime;
 
             if (volume.weight <= 0)
             {
