@@ -14,7 +14,7 @@ public class TextBox : MonoBehaviour
     [SerializeField] private float typingSpeed;
     [SerializeField] private GameObject continueButton;
     [SerializeField] private GameObject finalButton;
-    
+
     private void OnEnable()
     {
         index = 0;
@@ -104,4 +104,5 @@ public class TextBox : MonoBehaviour
             Destroy(gameObject);
         }
     }
+  
 }

@@ -12,9 +12,19 @@ public class EnemyMoveBehavior : MonoBehaviour
     private int waypointIndex;
     Vector3 target;
 
+    [SerializeField] private float restTime;
+    private float waitTime;
+
     public static bool isDetected = false;
+    public bool follow;
+
+    private void OnEnable()
+    {
+        UpdateDestination();
+    }
     private void Start()
     {
+        waitTime = restTime;
         agent = GetComponent<NavMeshAgent>();
         UpdateDestination();
     }
@@ -25,10 +35,11 @@ public class EnemyMoveBehavior : MonoBehaviour
             GetNextWaypoint();
             UpdateDestination();
         }
-        if (isDetected)
+        if (isDetected || follow)
         {
             agent.SetDestination(player.position);
         }
+        Debug.Log(waitTime);
     }
 
     void UpdateDestination()
@@ -39,10 +50,11 @@ public class EnemyMoveBehavior : MonoBehaviour
     
     void GetNextWaypoint()
     {
-        waypointIndex++;
-        if (waypointIndex >= waypoints.Count)
+        waitTime -= Time.deltaTime;
+        if (waitTime <= 0)
         {
-            waypointIndex = 0;
+            waypointIndex = (waypointIndex + 1) % waypoints.Count;
+            waitTime = restTime;
         }
     }
 

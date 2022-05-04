@@ -25,7 +25,7 @@ public class PlayerPotionCollectionCount : MonoBehaviour
             ProgrssionManager.lisbelaThirdLevel = true;
         }
         
-        Debug.Log(count);
+       // Debug.Log(count);
     }
 
     private void OnTriggerEnter(Collider other)

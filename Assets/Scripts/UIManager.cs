@@ -13,12 +13,21 @@ public class UIManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1;
-        StartCoroutine(TextBox());
+        //StartCoroutine(TextBox());
     }
 
     void Update()
     {
         Pause();
+
+        if (textBox.activeSelf == true)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 
     public void Pause()

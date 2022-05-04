@@ -13,7 +13,6 @@ public class PlayerCheckpoint : MonoBehaviour
         Debug.Log(spawnPosition.ToString());
         Cursor.lockState = CursorLockMode.Locked;
     }
-
     void Update()
     {
         if(gameObject.transform.position.y < -10f)
@@ -40,12 +39,17 @@ public class PlayerCheckpoint : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             EnemyMoveBehavior.isDetected = false;
         }
+        
     }
-
     private void Respawn()
     {
         gameObject.SetActive(false);
         gameObject.transform.position = spawnPosition + new Vector3(0, 2f, 0);
         gameObject.SetActive(true);
+    }
+
+    public void CollisonWithPS()
+    {
+        Respawn();
     }
 }

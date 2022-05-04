@@ -10,6 +10,8 @@ TagManager:
   - ColorChangeBullet
   - Potion
   - DetectionArea
+  - Enemy
+  - Vapor
   layers:
   - Default
   - TransparentFX
