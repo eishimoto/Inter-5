@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class ParticlesController : MonoBehaviour
 {
-    [SerializeField] private GameObject particles;
-    [SerializeField] private float partibleTime = 5f;
+    [SerializeField] private List<ParticleSystem> particles;
+    [SerializeField] private float particleTime = 5f;
     private float timer = 0f;
+
     private void Start()
     {
-        timer = partibleTime;
+        timer = particleTime;
     }
     private void Update()
     {
@@ -18,10 +19,21 @@ public class ParticlesController : MonoBehaviour
     public void ParticleInterval()
     {
         timer -= Time.deltaTime;
+        if (timer < particleTime/2)
+        {
+            foreach (var particleSystem in particles)
+            {
+                particleSystem.Stop();
+            }
+        }
         if (timer <= 0)
         {
-            particles.SetActive(true);
-            timer = partibleTime;
+            foreach (var particleSystem in particles)
+            {
+                particleSystem.Play();
+            }
+            
+            timer = particleTime;
         }
         Debug.Log(timer);
     }
