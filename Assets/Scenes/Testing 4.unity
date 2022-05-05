@@ -224,7 +224,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22666
+  m_Name: pb_Mesh153312
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1021,7 +1021,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 226220592}
-  m_LocalRotation: {x: 0.12623635, y: 0.000000017068734, z: -0.0000000021720705, w: 0.9920002}
+  m_LocalRotation: {x: 0.12623635, y: -0.000000017068734, z: 0.0000000021720705, w: 0.9920002}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1172,7 +1172,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257365186}
-  m_LocalRotation: {x: 0.15459648, y: -7.2888445e-10, z: -1.1413356e-10, w: 0.98797774}
+  m_LocalRotation: {x: 0.15459648, y: 7.2888445e-10, z: 1.1413356e-10, w: 0.98797774}
   m_LocalPosition: {x: 0, y: 5.81, z: -7.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1324,7 +1324,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9baa7e946b39f9b45b35344a3436d4e8, type: 2}
+  - {fileID: 2100000, guid: 1f87ecc3e86c50b4a80823976e505f27, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1998,10 +1998,10 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 25
+    angle: 14.56
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 1
+    radiusThickness: 0
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: -90, y: 0, z: 0}
@@ -2203,7 +2203,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 33.2
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -7050,10 +7050,10 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 25
+    angle: 14.56
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 1
+    radiusThickness: 0
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: -90, y: 0, z: 0}
@@ -7255,7 +7255,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 33.2
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -17340,7 +17340,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9baa7e946b39f9b45b35344a3436d4e8, type: 2}
+  - {fileID: 2100000, guid: 1f87ecc3e86c50b4a80823976e505f27, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18014,10 +18014,10 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 25
+    angle: 14.56
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 1
+    radiusThickness: 0
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: -90, y: 0, z: 0}
@@ -18219,7 +18219,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 33.2
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -22387,7 +22387,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1422413536}
-  m_LocalRotation: {x: 0.18301709, y: -0.000000008457881, z: 0.000000001574531, w: 0.9831098}
+  m_LocalRotation: {x: 0.18301709, y: 0.000000008457881, z: -0.000000001574531, w: 0.9831098}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
