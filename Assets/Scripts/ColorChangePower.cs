@@ -59,7 +59,7 @@ public class ColorChangePower : MonoBehaviour
     IEnumerator PostProcessingWeight2()
     {
         yield return new WaitForSeconds(5f);
-        volume.weight = 1;
+        volume.weight += 1;
         for (int i = 0; i < colorObjs.Length; i++)
         {
             colorObjs[i].SetActive(!colorObjs[i].activeSelf);
