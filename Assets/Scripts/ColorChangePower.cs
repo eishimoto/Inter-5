@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Rendering;
 
 public class ColorChangePower : MonoBehaviour
 {
-    [SerializeField] PostProcessVolume volume;
+    [SerializeField] Volume volume;
     [SerializeField] private GameObject[] colorObjs;
     [SerializeField] private Image powerBar;
     [SerializeField] private float powerCooldown = 0;
