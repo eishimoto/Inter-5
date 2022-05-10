@@ -9,7 +9,9 @@ public class ColorChangePower : MonoBehaviour
     [SerializeField] PostProcessVolume volume;
     [SerializeField] private GameObject[] colorObjs;
     [SerializeField] private Image powerBar;
-
+    [SerializeField] private float powerCooldown = 0;
+    [SerializeField] AudioSource audioSourcePower;
+    
     private bool usedPower = false;
     private bool CanUSePower = true;
     private bool CanfillPower = false;
@@ -34,6 +36,7 @@ public class ColorChangePower : MonoBehaviour
             usedPower = true;
             CanUSePower = false;
             CanfillPower = false;
+            audioSourcePower.Play();
         }
     }
     private void PostProcessingWight()
@@ -58,7 +61,7 @@ public class ColorChangePower : MonoBehaviour
     
     IEnumerator PostProcessingWeight2()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(powerCooldown);
         volume.weight += 1;
         for (int i = 0; i < colorObjs.Length; i++)
         {

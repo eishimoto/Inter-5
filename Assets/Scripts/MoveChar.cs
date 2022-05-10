@@ -10,7 +10,10 @@ public class MoveChar : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private float rotationSpeed;
 
+    [SerializeField] private List<AudioClip> footSteps;
+
     private CharacterController controller;
+    private AudioSource audioSource;
 
     float myDesiredRotation = 0f;
 
@@ -23,12 +26,14 @@ public class MoveChar : MonoBehaviour
     private void Start()
     {
         controller = gameObject.GetComponent<CharacterController>();
+        audioSource = gameObject.GetComponent<AudioSource>();
         myJumping = false;
     }
 
     void Update()
     {
         Movement();
+        WalkSound();
     }
 
     private void Movement()
@@ -76,5 +81,26 @@ public class MoveChar : MonoBehaviour
         Quaternion currentRotation = transform.rotation;
         Quaternion targetRotation = Quaternion.Euler(0, myDesiredRotation, 0);
         transform.rotation = Quaternion.Lerp(currentRotation, targetRotation, rotationSpeed * Time.deltaTime);
+    }
+
+    private void WalkSound()
+    {
+        if (controller.isGrounded && controller.velocity.magnitude > 2f && !audioSource.isPlaying)
+        {
+            if (mySprint)
+            {
+                audioSource.clip = footSteps[1];
+            }
+            else
+            {
+                audioSource.clip = footSteps[0];
+            }
+
+            audioSource.Play();
+        }
+        else if (controller.isGrounded && controller.velocity.magnitude < 2f && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
     }
 }

@@ -6,6 +6,7 @@ public class ParticlesController : MonoBehaviour
 {
     [SerializeField] private List<ParticleSystem> particles;
     [SerializeField] private float particleTime = 5f;
+    [SerializeField] private AudioSource particleSound;
     private float timer = 0f;
 
     private void Start()
@@ -24,6 +25,7 @@ public class ParticlesController : MonoBehaviour
             foreach (var particleSystem in particles)
             {
                 particleSystem.Stop();
+                particleSound.Stop();
             }
         }
         if (timer <= 0)
@@ -31,6 +33,7 @@ public class ParticlesController : MonoBehaviour
             foreach (var particleSystem in particles)
             {
                 particleSystem.Play();
+                particleSound.Play();
             }
             
             timer = particleTime;
