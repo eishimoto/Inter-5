@@ -10,6 +10,7 @@ public class CirlceSync : MonoBehaviour
     [SerializeField] private Material _material;
     [SerializeField] private Camera Camera;
     [SerializeField] private LayerMask layerMask;
+    [SerializeField] private float radius = 1f;
 
     // Update is called once per frame
     void Update()
@@ -19,7 +20,7 @@ public class CirlceSync : MonoBehaviour
 
         if (Physics.Raycast(ray, 3000, layerMask))
         {
-            _material.SetFloat(SizeID, 0.3f);
+            _material.SetFloat(SizeID, radius);
         }
         else
         {
