@@ -7,12 +7,14 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class ChangeCamControl : MonoBehaviour
 {
-    [SerializeField] private CinemachineVirtualCamera []cam;
-    [SerializeField] private GameObject player;
+    [SerializeField] private CinemachineVirtualCamera[] cam;
 
-    [SerializeField] private Image []arrows;
+    [SerializeField] private Image[] arrows;
     [SerializeField] private Sprite arrowSprites;
     [SerializeField] private Sprite arrowSpritesblack;
+
+    [SerializeField] private GameObject Lisbela;
+    [SerializeField] private GameObject Cam;
 
     private int currentCam;
     private int currentArrow;
@@ -28,6 +30,8 @@ public class ChangeCamControl : MonoBehaviour
     {
         ChangeCamWithOneKey();
         ChangeCamWithArrows();
+
+        Cam.transform.position = Vector3.MoveTowards(Cam.transform.position, Lisbela.transform.position, 0.1f);
     }
 
     private void ChangeCamWithArrows()

@@ -85,20 +85,28 @@ public class MoveChar : MonoBehaviour
 
     private void WalkSound()
     {
-        if (controller.isGrounded && controller.velocity.magnitude > 2f && !audioSource.isPlaying)
+        if (controller.isGrounded)
         {
-            if (mySprint)
+            if (controller.velocity.magnitude > 2f && !audioSource.isPlaying)
             {
-                audioSource.clip = footSteps[1];
-            }
-            else
-            {
-                audioSource.clip = footSteps[0];
-            }
+                if (mySprint)
+                {
+                    audioSource.clip = footSteps[1];
+                }
+                else
+                {
+                    audioSource.clip = footSteps[0];
+                }
 
-            audioSource.Play();
+                audioSource.Play();
+            }
+            else if (controller.isGrounded && controller.velocity.magnitude < 2f && audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
         }
-        else if (controller.isGrounded && controller.velocity.magnitude < 2f && audioSource.isPlaying)
+        
+        else if (controller.isGrounded)
         {
             audioSource.Stop();
         }

@@ -19,7 +19,7 @@ public class CirlceSync : MonoBehaviour
 
         if (Physics.Raycast(ray, 3000, layerMask))
         {
-            _material.SetFloat(SizeID, 0.5f);
+            _material.SetFloat(SizeID, 0.3f);
         }
         else
         {
