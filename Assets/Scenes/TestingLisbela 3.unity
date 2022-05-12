@@ -7218,11 +7218,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volume: {fileID: 434343199}
-  colorObjs:
+  hiddenObjs:
   - {fileID: 2137622497}
   - {fileID: 1205605386}
   powerBar: {fileID: 938972385}
-  powerCooldown: 2
+  powerCooldown: 5
   audioSourcePower: {fileID: 1325497076}
 --- !u!114 &207737787
 MonoBehaviour:

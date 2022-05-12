@@ -7,7 +7,7 @@ using UnityEngine.Rendering;
 public class ColorChangePower : MonoBehaviour
 {
     [SerializeField] Volume volume;
-    [SerializeField] private GameObject[] colorObjs;
+    [SerializeField] private GameObject[] hiddenObjs;
     [SerializeField] private Image powerBar;
     [SerializeField] private float powerCooldown = 0;
     [SerializeField] AudioSource audioSourcePower;
@@ -50,9 +50,9 @@ public class ColorChangePower : MonoBehaviour
             {
                 volume.weight = 0;
                 
-                for (int i = 0; i < colorObjs.Length; i++)
+                for (int i = 0; i < hiddenObjs.Length; i++)
                 {
-                    colorObjs[i].SetActive(!colorObjs[i].activeSelf);
+                    hiddenObjs[i].SetActive(!hiddenObjs[i].activeSelf);
                 }
                 StartCoroutine(PostProcessingWeight2());
             }     
@@ -63,9 +63,9 @@ public class ColorChangePower : MonoBehaviour
     {
         yield return new WaitForSeconds(powerCooldown);
         volume.weight += 1;
-        for (int i = 0; i < colorObjs.Length; i++)
+        for (int i = 0; i < hiddenObjs.Length; i++)
         {
-            colorObjs[i].SetActive(!colorObjs[i].activeSelf);
+            hiddenObjs[i].SetActive(!hiddenObjs[i].activeSelf);
         }
         if (volume.weight == 1)
         {
