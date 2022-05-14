@@ -7,6 +7,9 @@ public class PlayerCheckpoint : MonoBehaviour
 {
     Vector3 spawnPosition;
     public Vector3 inicialPostion;
+
+    [SerializeField] private bool lisbela;
+    [SerializeField] private bool leleu; 
     void Start()
     {
         spawnPosition = inicialPostion;
@@ -17,7 +20,14 @@ public class PlayerCheckpoint : MonoBehaviour
     {
         if(gameObject.transform.position.y < -10f)
         {
-            Respawn();
+            if(lisbela)
+            {
+                Respawn();
+            }
+            if(leleu)
+            {
+                RespawnOnCheckPoint();
+            }
         }
     }
 
@@ -36,12 +46,24 @@ public class PlayerCheckpoint : MonoBehaviour
 
         if (other.gameObject.CompareTag("Respawn"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            EnemyMoveBehavior.isDetected = false;
+            if (lisbela)
+            {
+                Respawn();
+            }
+            if (leleu)
+            {
+                RespawnOnCheckPoint();
+            }
         }
         
     }
     private void Respawn()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        EnemyMoveBehavior.isDetected = false;
+    }
+
+    private void RespawnOnCheckPoint()
     {
         gameObject.SetActive(false);
         gameObject.transform.position = spawnPosition + new Vector3(0, 2f, 0);

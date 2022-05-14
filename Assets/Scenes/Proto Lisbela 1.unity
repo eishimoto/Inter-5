@@ -960,6 +960,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inicialPostion: {x: 10.59, y: 0.577, z: -10.55}
+  lisbela: 1
+  leleu: 0
 --- !u!114 &207737788
 MonoBehaviour:
   m_ObjectHideFlags: 0
