@@ -11,6 +11,7 @@ public class MoveChar : MonoBehaviour
     [SerializeField] private float rotationSpeed;
 
     [SerializeField] private List<AudioClip> footSteps;
+    [SerializeField] private bool backwardsLevel;
 
     private CharacterController controller;
     private AudioSource audioSource;
