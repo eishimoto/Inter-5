@@ -67,4 +67,9 @@ public class Menu : MonoBehaviour
         leleuMap.SetActive(!leleuMap.activeSelf);
         lisbelaMap.SetActive(!lisbelaMap.activeSelf);
     }
+
+    public void TestButton()
+    {
+        Debug.Log("TestButton");
+    }
 }
