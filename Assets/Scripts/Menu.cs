@@ -8,6 +8,7 @@ public class Menu : MonoBehaviour
 {
     [SerializeField] private Animator animator;
     [SerializeField] private GameObject insideOfBookMenu;
+    [SerializeField] private List<GameObject> insideOfBookMenuButtons;
 
     [SerializeField] private GameObject leleuMap;
     [SerializeField] private GameObject lisbelaMap;
@@ -60,6 +61,10 @@ public class Menu : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         insideOfBookMenu.SetActive(true);
+        foreach (GameObject button in insideOfBookMenuButtons)
+        {
+            button.SetActive(true);
+        }
     }
 
     public void FlipMap()
