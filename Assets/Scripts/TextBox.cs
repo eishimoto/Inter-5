@@ -14,7 +14,7 @@ public class TextBox : MonoBehaviour
     [SerializeField] private float typingSpeed;
     [SerializeField] private GameObject continueButton;
     [SerializeField] private GameObject finalButton;
-
+    
     private void OnEnable()
     {
         index = 0;
@@ -30,6 +30,10 @@ public class TextBox : MonoBehaviour
         if (textBox.text == textToWrite[index])
         {
             continueButton.SetActive(true);
+        }
+        if (gameObject.activeSelf.Equals(true))
+        {
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 
@@ -79,14 +83,14 @@ public class TextBox : MonoBehaviour
         {
             textBox.text = null;
             StartCoroutine(CloseTextBox());
-            Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.lockState = CursorLockMode.Locked;
         }
     }
 
     public void CloseTextBoxButton()
     {
         gameObject.SetActive(false);
-        Cursor.lockState = CursorLockMode.Locked;
+       // Cursor.lockState = CursorLockMode.Locked;
     }
     public void FinalTextPanel()
     {
@@ -104,5 +108,9 @@ public class TextBox : MonoBehaviour
             Destroy(gameObject);
         }
     }
-  
+
+    private void OnDisable()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 }

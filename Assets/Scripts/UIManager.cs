@@ -13,21 +13,12 @@ public class UIManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1;
-        //StartCoroutine(TextBox());
+        StartCoroutine(OpenTextBox());
     }
 
     void Update()
     {
         Pause();
-
-        if (textBox.activeSelf == true)
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
     }
 
     public void Pause()
@@ -58,7 +49,7 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    IEnumerator TextBox()
+    IEnumerator OpenTextBox()
     {
         yield return new WaitForSeconds(2);
         textBox.SetActive(true);
