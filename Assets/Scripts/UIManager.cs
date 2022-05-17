@@ -13,7 +13,7 @@ public class UIManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1;
-        StartCoroutine(OpenTextBox());
+        //StartCoroutine(OpenTextBox());
     }
 
     void Update()

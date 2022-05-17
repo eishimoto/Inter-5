@@ -17766,6 +17766,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8832528483791116583, guid: 4884947754dd4ba4e9fcf9eeba5aeef7, type: 3}
+      propertyPath: textToWrite.Array.data[0]
+      value: 'Leleu:  aaaaaaaaaaaaaaaaaaaaaaaaaaa'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832528483791116583, guid: 4884947754dd4ba4e9fcf9eeba5aeef7, type: 3}
+      propertyPath: textToWrite.Array.data[1]
+      value: 'Mocinha: aaaaaaaaaaaaaaaaaaaaaaaaa'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832528483791116583, guid: 4884947754dd4ba4e9fcf9eeba5aeef7, type: 3}
+      propertyPath: textToWrite.Array.data[2]
+      value: 'Leleu:  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4884947754dd4ba4e9fcf9eeba5aeef7, type: 3}
 --- !u!1 &1717113157 stripped
@@ -19294,7 +19306,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2037432249}
-  m_LocalRotation: {x: 0.18423863, y: 0.000000023516835, z: -0.0000000044081703, w: 0.98288155}
+  m_LocalRotation: {x: 0.18423864, y: 0.0000000110452, z: -0.0000000020703947, w: 0.98288155}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
