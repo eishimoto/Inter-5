@@ -92,7 +92,7 @@ public class MoveChar : MonoBehaviour
             {
                 if (mySprint)
                 {
-                    audioSource.clip = footSteps[1];
+                    audioSource.clip = footSteps[0];
                 }
                 else
                 {

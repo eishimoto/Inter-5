@@ -9,6 +9,7 @@ public class EnemyMoveBehavior : MonoBehaviour
 
     [SerializeField] private Transform player;
     [SerializeField] private List<Transform> waypoints;
+    [SerializeField] private Light enemyLight;
     private int waypointIndex;
     Vector3 target;
 
@@ -40,6 +41,7 @@ public class EnemyMoveBehavior : MonoBehaviour
         else if (isDetected || follow)
         {
             agent.SetDestination(player.position);
+            enemyLight.color = Color.red;
         }
         Debug.Log(waitTime);
     }
