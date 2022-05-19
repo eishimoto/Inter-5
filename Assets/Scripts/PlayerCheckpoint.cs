@@ -9,9 +9,12 @@ public class PlayerCheckpoint : MonoBehaviour
     public Vector3 inicialPostion;
 
     [SerializeField] private bool lisbela;
-    [SerializeField] private bool leleu; 
+    [SerializeField] private bool leleu;
+
+    private bool canBeDetected;
     void Start()
     {
+        canBeDetected = true;
         spawnPosition = inicialPostion;
         Debug.Log(spawnPosition.ToString());
         Cursor.lockState = CursorLockMode.Locked;
@@ -40,15 +43,21 @@ public class PlayerCheckpoint : MonoBehaviour
         }
         if (other.gameObject.CompareTag("DetectionArea"))
         {
-            EnemyMoveBehavior.isDetected = true;
-            Debug.Log(EnemyMoveBehavior.isDetected);
+            if (canBeDetected)
+            {
+                EnemyMoveBehavior.isDetected = true;
+                Debug.Log(EnemyMoveBehavior.isDetected);
+            }
         }
 
         if (other.gameObject.CompareTag("Respawn"))
         {
             if (lisbela)
             {
-                Respawn();
+                if (canBeDetected)
+                {
+                    Respawn();
+                }
             }
             if (leleu)
             {
@@ -73,5 +82,10 @@ public class PlayerCheckpoint : MonoBehaviour
     public void CollisonWithPS()
     {
         Respawn();
+    }
+
+    public void CanBeDetedtedTurnOFF()
+    {
+        canBeDetected = false;
     }
 }
