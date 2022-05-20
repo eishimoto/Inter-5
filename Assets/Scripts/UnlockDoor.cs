@@ -14,6 +14,7 @@ public class UnlockDoor : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(keys);
         if (keys == 4)
         {
             door.SetActive(false);

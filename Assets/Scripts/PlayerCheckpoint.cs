@@ -16,7 +16,6 @@ public class PlayerCheckpoint : MonoBehaviour
     {
         canBeDetected = true;
         spawnPosition = inicialPostion;
-        Debug.Log(spawnPosition.ToString());
         Cursor.lockState = CursorLockMode.Locked;
     }
     void Update()

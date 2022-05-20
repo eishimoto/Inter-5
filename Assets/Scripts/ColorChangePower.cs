@@ -33,7 +33,6 @@ public class ColorChangePower : MonoBehaviour
         ChangeColor();
         PostProcessingWight();
         FillPowerBar();
-        Debug.Log(colorAdjustments.saturation.value);
     }
     private void ChangeColor()
     {

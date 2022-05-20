@@ -43,7 +43,6 @@ public class EnemyMoveBehavior : MonoBehaviour
             agent.SetDestination(player.position);
             enemyLight.color = Color.red;
         }
-        Debug.Log(waitTime);
     }
 
     void UpdateDestination()
