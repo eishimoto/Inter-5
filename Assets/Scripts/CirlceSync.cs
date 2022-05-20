@@ -7,7 +7,7 @@ public class CirlceSync : MonoBehaviour
     public static int PosID = Shader.PropertyToID("_Player");
     public static int SizeID = Shader.PropertyToID("_Size");
     
-    [SerializeField] private Material _material;
+    [SerializeField] private List<Material> _material;
     [SerializeField] private Camera Camera;
     [SerializeField] private LayerMask layerMask;
     [SerializeField] private float radius = 1f;
@@ -20,14 +20,25 @@ public class CirlceSync : MonoBehaviour
 
         if (Physics.Raycast(ray, 3000, layerMask))
         {
-            _material.SetFloat(SizeID, radius);
+            foreach (var mat in _material)
+            {
+                mat.SetVector(PosID, transform.position);
+                mat.SetFloat(SizeID, radius);
+            }
         }
         else
         {
-            _material.SetFloat(SizeID, 0);
+            foreach (var mat in _material)
+            {
+                mat.SetVector(PosID, Vector3.zero);
+                mat.SetFloat(SizeID, 0);
+            }
         }
 
         var view = Camera.WorldToViewportPoint(transform.position);
-        _material.SetVector(PosID, view);
+        foreach (var mat in _material)
+        {
+            mat.SetVector(PosID, view);
+        }
     }
 }
