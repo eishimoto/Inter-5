@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Rendering;
+using UnityEngine.Rendering.HighDefinition;
+
 
 public class ColorChangePower : MonoBehaviour
 {
@@ -11,16 +13,19 @@ public class ColorChangePower : MonoBehaviour
     [SerializeField] private Image powerBar;
     [SerializeField] private float powerCooldown = 0;
     [SerializeField] AudioSource audioSourcePower;
-    
+
+    private ColorAdjustments colorAdjustments;
+
     private bool usedPower = false;
     private bool CanUSePower = true;
     private bool CanfillPower = false;
     void Start()
     {
-        volume.weight = 1;
         usedPower = false;
         CanUSePower = true;
         CanfillPower = false;
+        volume.profile.TryGet<ColorAdjustments> (out colorAdjustments);
+        colorAdjustments.saturation.value = -100f;
     }
 
     void Update()
@@ -28,6 +33,7 @@ public class ColorChangePower : MonoBehaviour
         ChangeColor();
         PostProcessingWight();
         FillPowerBar();
+        Debug.Log(colorAdjustments.saturation.value);
     }
     private void ChangeColor()
     {
@@ -41,14 +47,14 @@ public class ColorChangePower : MonoBehaviour
     }
     private void PostProcessingWight()
     {
-        if (volume.weight > 0 && usedPower)
+        if (colorAdjustments.saturation.value < 0 && usedPower)
         {
-            volume.weight -= 0.7f * Time.deltaTime;
+            colorAdjustments.saturation.value += 70f * Time.deltaTime;
             powerBar.fillAmount -= 0.7f * Time.deltaTime;
 
-            if (volume.weight <= 0)
+            if (colorAdjustments.saturation.value >= 0)
             {
-                volume.weight = 0;
+                colorAdjustments.saturation.value = 0;
                 
                 for (int i = 0; i < hiddenObjs.Length; i++)
                 {
@@ -62,7 +68,7 @@ public class ColorChangePower : MonoBehaviour
     IEnumerator PostProcessingWeight2()
     {
         yield return new WaitForSeconds(powerCooldown);
-        volume.weight += 1;
+        colorAdjustments.saturation.value = -100f;
         for (int i = 0; i < hiddenObjs.Length; i++)
         {
             hiddenObjs[i].SetActive(!hiddenObjs[i].activeSelf);
