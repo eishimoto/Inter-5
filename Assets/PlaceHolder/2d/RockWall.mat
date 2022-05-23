@@ -214,7 +214,7 @@ Material:
     - _RefractionModel: 0
     - _RenderQueueType: 4
     - _RequireSplitLighting: 0
-    - _Size: 0
+    - _Size: 0.3
     - _Smoothness: 0.5
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
@@ -256,7 +256,7 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 0
     m_Colors:
-    - Color_ec7f056e1f43488ebe89f59ffb639bee: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 1}
+    - Color_ec7f056e1f43488ebe89f59ffb639bee: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 0}
     - _BaseColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
@@ -267,7 +267,7 @@ Material:
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
-    - _Player: {r: 0.42039266, g: 0.48712197, b: 35.758984, a: 0}
+    - _Player: {r: 0.6768805, g: 0.34141263, b: 29.199816, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}

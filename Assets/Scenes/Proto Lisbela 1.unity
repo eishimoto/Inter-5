@@ -1176,6 +1176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _material:
   - {fileID: 2100000, guid: e56a0db412e163542b8067aa727f608f, type: 2}
+  - {fileID: 2100000, guid: 6b5cb974b7d6187438789d1c8f52769c, type: 2}
   Camera: {fileID: 963194227}
   layerMask:
     serializedVersion: 2
@@ -2025,7 +2026,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e187f47570131c9438e2f9af0c6579d0, type: 2}
+  - {fileID: 2100000, guid: 6b5cb974b7d6187438789d1c8f52769c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2108,7 +2109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12dd16a9abbe3f44f8b27f00087f8355, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.244
+      value: -11.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12dd16a9abbe3f44f8b27f00087f8355, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3721,7 +3722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fca9dbe57859ca14792d60e965afac35, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.52
+      value: 8.057
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fca9dbe57859ca14792d60e965afac35, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6091,7 +6092,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e187f47570131c9438e2f9af0c6579d0, type: 2}
+  - {fileID: 2100000, guid: 6b5cb974b7d6187438789d1c8f52769c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
