@@ -18,7 +18,7 @@ public class CirlceSync : MonoBehaviour
         var dir = Camera.transform.position - transform.position;
         var ray = new Ray(transform.position, dir.normalized);
 
-        if (Physics.Raycast(ray, 3000, layerMask))
+        if (Physics.Raycast(ray, 200, layerMask))
         {
             foreach (var mat in _material)
             {
