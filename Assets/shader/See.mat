@@ -265,7 +265,7 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - Color_8b0fdf9c42014ba19f28e0a0d65fdaa5: {r: 0.19811317, g: 0.19811317, b: 0.19811317, a: 1}
-    - Color_ec7f056e1f43488ebe89f59ffb639bee: {r: 0, g: 0, b: 0, a: 0}
+    - Color_ec7f056e1f43488ebe89f59ffb639bee: {r: 0.8962264, g: 0.8634868, b: 0.8088584, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
@@ -276,7 +276,7 @@ Material:
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
-    - _Player: {r: 0.5, g: 0.43084732, b: 35.980766, a: 0}
+    - _Player: {r: 0.40574047, g: 0.5038563, b: 40.31089, a: 0}
     - _Specular: {r: 0, g: 0, b: 0, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}

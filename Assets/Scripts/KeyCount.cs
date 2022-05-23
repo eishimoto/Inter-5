@@ -19,6 +19,14 @@ public class KeyCount : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            keyPrompt.SetActive(false);
+        }
+    }
     private void OnDisable()
     {
         keyPrompt.SetActive(false);
