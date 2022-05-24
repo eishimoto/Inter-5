@@ -46,6 +46,7 @@ public class MoveChar : MonoBehaviour
             myJumping = true;
             mySpeedY = 0;
             mySpeedY += Mathf.Sqrt(jumpForce * -2 * myGravity);
+            audioSource.Stop();
         }
 
         if (!controller.isGrounded)
@@ -56,12 +57,13 @@ public class MoveChar : MonoBehaviour
         {
             mySpeedY = 0;
         }
-
+        
         if (myJumping && mySpeedY <= 0)
         {
             RaycastHit hit;
             if (Physics.Raycast(transform.position, Vector3.down, out hit, 2f, LayerMask.GetMask("Ground")))
             {
+                Debug.DrawRay(transform.position, Vector3.down * 2f, Color.blue);
                 myJumping = false;
             }
         }
@@ -85,13 +87,16 @@ public class MoveChar : MonoBehaviour
 
     private void WalkSound()
     {
-        if (controller.isGrounded && controller.velocity.magnitude > 2f && !audioSource.isPlaying)
+       if(controller.isGrounded)
         {
-            audioSource.Play();
-        }
-        else if (controller.isGrounded && controller.velocity.magnitude < 2f && audioSource.isPlaying)
-        {
-            audioSource.Stop();
+            if (controller.velocity.magnitude > 1f && !audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+            else if (controller.velocity.magnitude < 1f && audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
         }
     }
 }
