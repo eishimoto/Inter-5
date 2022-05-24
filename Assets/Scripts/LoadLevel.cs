@@ -19,7 +19,7 @@ public class LoadLevel : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other != null)
+        if (other.gameObject.tag == "Player")
         {
             SceneManager.LoadScene(number);
         }

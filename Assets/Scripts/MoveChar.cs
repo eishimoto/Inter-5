@@ -9,8 +9,7 @@ public class MoveChar : MonoBehaviour
     [SerializeField] private float sprintSpeed = 6f;
     [SerializeField] private float jumpForce;
     [SerializeField] private float rotationSpeed;
-
-    [SerializeField] private List<AudioClip> footSteps;
+    
     [SerializeField] private bool backwardsLevel;
 
     private CharacterController controller;
@@ -86,28 +85,11 @@ public class MoveChar : MonoBehaviour
 
     private void WalkSound()
     {
-        if (controller.isGrounded)
+        if (controller.isGrounded && controller.velocity.magnitude > 2f && !audioSource.isPlaying)
         {
-            if (controller.velocity.magnitude > 2f && !audioSource.isPlaying)
-            {
-                if (mySprint)
-                {
-                    audioSource.clip = footSteps[0];
-                }
-                else
-                {
-                    audioSource.clip = footSteps[0];
-                }
-
-                audioSource.Play();
-            }
-            else if (controller.isGrounded && controller.velocity.magnitude < 2f && audioSource.isPlaying)
-            {
-                audioSource.Stop();
-            }
+            audioSource.Play();
         }
-        
-        else if (controller.isGrounded)
+        else if (controller.isGrounded && controller.velocity.magnitude < 2f && audioSource.isPlaying)
         {
             audioSource.Stop();
         }
