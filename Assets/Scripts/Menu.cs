@@ -77,4 +77,9 @@ public class Menu : MonoBehaviour
     {
         Debug.Log("TestButton");
     }
+
+    public void loadLevel(int level)
+    {
+        SceneManager.LoadScene(level);
+    }
 }
