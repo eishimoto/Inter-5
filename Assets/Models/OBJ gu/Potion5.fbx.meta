@@ -3,7 +3,22 @@ guid: 65d5c0f20d496aa40b5ae4ac84ce0630
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rolha
+    second: {fileID: 2100000, guid: 627a5b82df718774aa5cac51bfaed797, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Teste2.001
+    second: {fileID: 2100000, guid: 19fffdc9832a08340aeae3ccab467764, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vermelho
+    second: {fileID: 2100000, guid: 92045c5d05972ad4ea70b3c3187bdc2f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

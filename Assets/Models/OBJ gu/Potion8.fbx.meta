@@ -3,7 +3,22 @@ guid: 81ddde16e941873458ccc064dfc45b78
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Preto
+    second: {fileID: 2100000, guid: 73fb4946e02ca4e4aa35010fc61095d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rolha.006
+    second: {fileID: 2100000, guid: f339483c4ea71d841889e804e004425f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Teste2.001
+    second: {fileID: 2100000, guid: fa4e3fbfef859d345adaa3f831b9375b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

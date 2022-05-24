@@ -3,7 +3,22 @@ guid: 4d39b7117dc6bf741bf17ddffbdcd2e2
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Marrom
+    second: {fileID: 2100000, guid: 8343599d4c4f18c40a694858f837e5c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rolha.004
+    second: {fileID: 2100000, guid: 1729f041105cedf42bcc65c14c95d63f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Teste2.001
+    second: {fileID: 2100000, guid: 70012dee6f513624eb9494a7ed5828a7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
