@@ -15,6 +15,8 @@ public class MoveChar : MonoBehaviour
     private CharacterController controller;
     private AudioSource audioSource;
 
+    private Animator animator;
+
     float myDesiredRotation = 0f;
 
     bool mySprint = false;
@@ -27,6 +29,7 @@ public class MoveChar : MonoBehaviour
     {
         controller = gameObject.GetComponent<CharacterController>();
         audioSource = gameObject.GetComponent<AudioSource>();
+        animator = gameObject.GetComponent<Animator>();
         myJumping = false;
     }
 
@@ -34,6 +37,7 @@ public class MoveChar : MonoBehaviour
     {
         Movement();
         WalkSound();
+        AnimationHandler();
     }
 
     private void Movement()
@@ -98,5 +102,10 @@ public class MoveChar : MonoBehaviour
                 audioSource.Stop();
             }
         }
+    }
+    
+    private void AnimationHandler()
+    {
+        animator.SetFloat("Speed", controller.velocity.magnitude);
     }
 }
