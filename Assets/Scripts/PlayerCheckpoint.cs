@@ -63,13 +63,16 @@ public class PlayerCheckpoint : MonoBehaviour
                 RespawnOnCheckPoint();
             }
         }
+    }
 
-        if (other.gameObject.CompareTag("Vapor"))
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Vapor"))
         {
             RespawnOnCheckPoint();
         }
-
     }
+    
     private void Respawn()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

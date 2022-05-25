@@ -127,7 +127,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_1dffd9a652b24a0aa9563012cd65ee04: 0.5
-    - Vector1_5d17babf4638416f9f199fbf9b827d3b: 0.3
+    - Vector1_5d17babf4638416f9f199fbf9b827d3b: 0.507
     - Vector1_68ab5110db47405982d29ce4b8e7ef34: 1
     - _AORemapMax: 1
     - _AORemapMin: 0
@@ -254,7 +254,7 @@ Material:
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
-    - _Player: {r: 0.786025, g: 0.1986919, b: 24.671852, a: 0}
+    - _Player: {r: 0.75014484, g: 0.23974341, b: 25.823668, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}

@@ -1862,9 +1862,6 @@ MonoBehaviour:
   sprintSpeed: 5
   jumpForce: 0
   rotationSpeed: 10
-  footSteps:
-  - {fileID: 8300000, guid: 255830dd59ff50a4a93b4642ba003e2f, type: 3}
-  - {fileID: 8300000, guid: 255830dd59ff50a4a93b4642ba003e2f, type: 3}
   backwardsLevel: 0
 --- !u!143 &207737789
 CharacterController:
@@ -10613,7 +10610,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 70aafcae76e12d640bbf2233f8f30d0e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fe34973b7b36f1149823574196094803, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

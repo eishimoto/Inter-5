@@ -980,7 +980,6 @@ MonoBehaviour:
   sprintSpeed: 5
   jumpForce: 0
   rotationSpeed: 10
-  footSteps: []
   backwardsLevel: 0
 --- !u!143 &207737789
 CharacterController:
@@ -3030,7 +3029,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691461950}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.33, y: 10.23, z: 28.18}
+  m_LocalPosition: {x: -11.33, y: 10.23, z: 27.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6643,7 +6642,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 70aafcae76e12d640bbf2233f8f30d0e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fe34973b7b36f1149823574196094803, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.7
   m_Pitch: 1
