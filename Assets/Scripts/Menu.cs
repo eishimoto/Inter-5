@@ -10,8 +10,9 @@ public class Menu : MonoBehaviour
     [SerializeField] private GameObject insideOfBookMenu;
     [SerializeField] private List<GameObject> insideOfBookMenuButtons;
 
-    [SerializeField] private GameObject leleuMap;
-    [SerializeField] private GameObject lisbelaMap;
+    [SerializeField] private List<GameObject> maps;
+    [SerializeField] private List<GameObject> credits;
+    [SerializeField] private List<GameObject> extras;
 
     private void Awake()
     {
@@ -67,19 +68,57 @@ public class Menu : MonoBehaviour
         }
     }
 
-    public void FlipMap()
+    public void Map()
     {
-        leleuMap.SetActive(!leleuMap.activeSelf);
-        lisbelaMap.SetActive(!lisbelaMap.activeSelf);
+        foreach (GameObject map in maps)
+        {
+            map.SetActive(true);
+        }
+
+        foreach (GameObject credit in credits)
+        {
+            credit.SetActive(false);
+        }
+
+        foreach (GameObject extra in extras)
+        {
+            extra.SetActive(false);
+        }
     }
 
-    public void TestButton()
+    public void Credits()
     {
-        Debug.Log("TestButton");
+        foreach (GameObject map in maps)
+        {
+            map.SetActive(false);
+        }
+
+        foreach (GameObject credit in credits)
+        {
+            credit.SetActive(true);
+        }
+
+        foreach (GameObject extra in extras)
+        {
+            extra.SetActive(false);
+        }
     }
 
-    public void loadLevel(int level)
+    public void Extras()
     {
-        SceneManager.LoadScene(level);
+        foreach (GameObject map in maps)
+        {
+            map.SetActive(false);
+        }
+
+        foreach (GameObject credit in credits)
+        {
+            credit.SetActive(false);
+        }
+
+        foreach (GameObject extra in extras)
+        {
+            extra.SetActive(true);
+        }
     }
 }
