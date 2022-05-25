@@ -24,7 +24,7 @@ public class Menu : MonoBehaviour
     }
     public void LoadFirstLevel()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(5);
     }
     public void LoadSecondLevel()
     {
@@ -38,15 +38,6 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene(4);
     }
-    public void LoadFifthLevel()
-    {
-        SceneManager.LoadScene(5);
-    }
-    public void LoadSixthLevel()
-    {
-        SceneManager.LoadScene(6);
-    }
-
     public void CloseGame()
     {
         Application.Quit();

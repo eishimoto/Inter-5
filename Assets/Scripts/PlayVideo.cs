@@ -8,8 +8,7 @@ public class PlayVideo : MonoBehaviour
 {
     [SerializeField] RawImage rawImage;
     [SerializeField] VideoPlayer videoPlayer;
-    [SerializeField] AudioSource audioSource;
-    
+    [SerializeField] GameObject blackscreen;
     void Start()
     {
         StartCoroutine(PlayVideoCoroutine());
@@ -26,6 +25,6 @@ public class PlayVideo : MonoBehaviour
         }
         rawImage.texture = videoPlayer.texture;
         videoPlayer.Play();
-        audioSource.Play();
+        blackscreen.SetActive(false);
     }
 }
