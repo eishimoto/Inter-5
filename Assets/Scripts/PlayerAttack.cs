@@ -6,7 +6,7 @@ using TMPro;
 public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _attackText;
-    
+
     Ray ray;
     private void Start()
     {
@@ -17,7 +17,6 @@ public class PlayerAttack : MonoBehaviour
     {
         ray = new Ray(transform.position, transform.forward);
         Debug.DrawRay(ray.origin, ray.direction * 1, Color.red);
-
         DestroyWall();
     }
 

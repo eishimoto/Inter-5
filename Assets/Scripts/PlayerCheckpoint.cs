@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerCheckpoint : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class PlayerCheckpoint : MonoBehaviour
 
     [SerializeField] private bool lisbela;
     [SerializeField] private bool leleu;
+
+    [SerializeField] private AudioSource checkAudioSource;
+    [SerializeField] private AudioClip checkAudioClip;
+
+    [SerializeField] private TextMeshProUGUI checkpointText;
 
     private bool canBeDetected;
     void Start()
@@ -39,6 +45,8 @@ public class PlayerCheckpoint : MonoBehaviour
         {
             spawnPosition = other.gameObject.transform.position + new Vector3(2, 0, 0);
             Debug.Log(spawnPosition.ToString());
+            checkAudioSource.PlayOneShot(checkAudioClip);
+            checkpointText.text = "Checkpoint";
         }
         if (other.gameObject.CompareTag("DetectionArea"))
         {

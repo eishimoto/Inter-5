@@ -26,7 +26,7 @@ public class EnemyMoveBehavior : MonoBehaviour
     private void Start()
     {
         isDetected = false;
-        follow = false;
+        //follow = false;
         waitTime = restTime;
         agent = GetComponent<NavMeshAgent>();
         UpdateDestination();
@@ -38,7 +38,7 @@ public class EnemyMoveBehavior : MonoBehaviour
             GetNextWaypoint();
             UpdateDestination();
         }
-        else if (isDetected || follow)
+        if (isDetected || follow)
         {
             agent.SetDestination(player.position);
             enemyLight.color = Color.red;

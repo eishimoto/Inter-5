@@ -14,6 +14,8 @@ public class MoveChar : MonoBehaviour
 
     private CharacterController controller;
     private AudioSource audioSource;
+    [SerializeField] private AudioSource jumpSound;
+    [SerializeField] private AudioClip jump;
 
     private Animator animator;
 
@@ -47,6 +49,7 @@ public class MoveChar : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && !myJumping)
         {
+            jumpSound.PlayOneShot(jump);
             animator.SetTrigger("Jump");
             animator.SetBool("isJumping", true);
             myJumping = true;

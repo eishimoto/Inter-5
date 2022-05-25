@@ -16,10 +16,14 @@ public class ChangeCamControl : MonoBehaviour
     [SerializeField] private GameObject Lisbela;
     [SerializeField] private GameObject Cam;
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip audioClips;
+
     private int currentCam;
     private int currentArrow;
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         arrows[0].sprite = arrowSprites;
         arrows[1].sprite = arrowSpritesblack;
         arrows[2].sprite = arrowSpritesblack;
@@ -38,6 +42,7 @@ public class ChangeCamControl : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
+            audioSource.PlayOneShot(audioClips);
             cam[3].gameObject.SetActive(false);
             cam[2].gameObject.SetActive(true);
             cam[1].gameObject.SetActive(false);
@@ -49,6 +54,7 @@ public class ChangeCamControl : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
+            audioSource.PlayOneShot(audioClips);
             cam[3].gameObject.SetActive(false);
             cam[2].gameObject.SetActive(false);
             cam[1].gameObject.SetActive(false);
@@ -60,6 +66,7 @@ public class ChangeCamControl : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
+            audioSource.PlayOneShot(audioClips);
             cam[3].gameObject.SetActive(true);
             cam[2].gameObject.SetActive(false);
             cam[1].gameObject.SetActive(false);
@@ -71,6 +78,7 @@ public class ChangeCamControl : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
+            audioSource.PlayOneShot(audioClips);
             cam[3].gameObject.SetActive(false);
             cam[2].gameObject.SetActive(false);
             cam[1].gameObject.SetActive(true);
@@ -86,6 +94,7 @@ public class ChangeCamControl : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Q))
         {
+            audioSource.PlayOneShot(audioClips);
             currentCam++;
             if (currentCam < cam.Length)
             {
