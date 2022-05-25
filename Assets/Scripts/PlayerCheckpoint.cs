@@ -63,7 +63,12 @@ public class PlayerCheckpoint : MonoBehaviour
                 RespawnOnCheckPoint();
             }
         }
-        
+
+        if (other.gameObject.CompareTag("Vapor"))
+        {
+            RespawnOnCheckPoint();
+        }
+
     }
     private void Respawn()
     {

@@ -47,6 +47,8 @@ public class MoveChar : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && !myJumping)
         {
+            animator.SetTrigger("Jump");
+            animator.SetBool("isJumping", true);
             myJumping = true;
             mySpeedY = 0;
             mySpeedY += Mathf.Sqrt(jumpForce * -2 * myGravity);
@@ -69,6 +71,7 @@ public class MoveChar : MonoBehaviour
             {
                 Debug.DrawRay(transform.position, Vector3.down * 2f, Color.blue);
                 myJumping = false;
+                animator.SetBool("isJumping", false);
             }
         }
 
