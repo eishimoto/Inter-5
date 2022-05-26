@@ -44,9 +44,9 @@ public class PlayerCheckpoint : MonoBehaviour
         if(other.gameObject.CompareTag("Checkpoint"))
         {
             spawnPosition = other.gameObject.transform.position + new Vector3(2, 0, 0);
-            Debug.Log(spawnPosition.ToString());
             checkAudioSource.PlayOneShot(checkAudioClip);
             checkpointText.text = "Checkpoint";
+            StartCoroutine(ClearText());
         }
         if (other.gameObject.CompareTag("DetectionArea"))
         {
@@ -73,14 +73,14 @@ public class PlayerCheckpoint : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnParticleCollision(GameObject other)
     {
-        if (collision.gameObject.CompareTag("Vapor"))
+        if (other.gameObject.CompareTag("Vapor"))
         {
             RespawnOnCheckPoint();
         }
     }
-    
+
     private void Respawn()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -93,14 +93,14 @@ public class PlayerCheckpoint : MonoBehaviour
         gameObject.transform.position = spawnPosition + new Vector3(0, 2f, 0);
         gameObject.SetActive(true);
     }
-
-    public void CollisonWithPS()
-    {
-        Respawn();
-    }
-
     public void CanBeDetedtedTurnOFF()
     {
         canBeDetected = false;
+    }
+
+    IEnumerator ClearText()
+    {
+        yield return new WaitForSeconds(2f);
+        checkpointText.text = "";
     }
 }

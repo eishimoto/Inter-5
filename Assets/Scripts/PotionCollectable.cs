@@ -8,13 +8,14 @@ public class PotionCollectable : MonoBehaviour
     [SerializeField] Image Image;
     [SerializeField] Sprite Image2;
 
+    [SerializeField] private AudioSource potionAudioSource;
+    [SerializeField] private AudioClip potionAudioClip;
+
     UpdateScore updateScore;
 
     private void Start()
     {
-        updateScore = GameObject.Find("ScoreUpdate").GetComponent<UpdateScore>();
     }
-
     private void Update()
     {
     }
@@ -24,8 +25,8 @@ public class PotionCollectable : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Image.sprite = Image2;
+            potionAudioSource.PlayOneShot(potionAudioClip);
             Destroy(gameObject);
-            updateScore.AddPointsPotion();
         }
     }
 }

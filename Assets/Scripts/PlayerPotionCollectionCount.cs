@@ -9,7 +9,6 @@ public class PlayerPotionCollectionCount : MonoBehaviour
     public bool leleuLevelOne;
     public bool leleuLevelTwo;
     public bool leleuLevelThree;
-    
     void Start()
     {
        count = 0;
@@ -24,8 +23,6 @@ public class PlayerPotionCollectionCount : MonoBehaviour
         {
             ProgrssionManager.lisbelaThirdLevel = true;
         }
-        
-       // Debug.Log(count);
     }
 
     private void OnTriggerEnter(Collider other)
