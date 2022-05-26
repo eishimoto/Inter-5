@@ -14,6 +14,9 @@ public class Menu : MonoBehaviour
     [SerializeField] private List<GameObject> credits;
     [SerializeField] private List<GameObject> extras;
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip buttonClick;
+
     private void Awake()
     {
         Time.timeScale = 1;
@@ -21,6 +24,7 @@ public class Menu : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.None;
+        audioSource = GetComponent<AudioSource>();
     }
     public void LoadFirstLevel()
     {
@@ -111,5 +115,10 @@ public class Menu : MonoBehaviour
         {
             extra.SetActive(true);
         }
+    }
+
+    public void ButtonSound()
+    {
+        audioSource.PlayOneShot(buttonClick);
     }
 }
