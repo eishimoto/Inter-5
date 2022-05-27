@@ -72,7 +72,7 @@ public class MoveChar : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(transform.position, Vector3.down, out hit, 2f, LayerMask.GetMask("Ground")))
             {
-                Debug.DrawRay(transform.position, Vector3.down * 2f, Color.blue);
+                Debug.DrawRay(transform.position, Vector3.down * 3f, Color.blue);
                 myJumping = false;
                 animator.SetBool("isJumping", false);
             }
