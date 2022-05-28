@@ -3462,6 +3462,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6672992475104339456, guid: 43f2570232355fb449838870f98ba651, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6672992475104339458, guid: 43f2570232355fb449838870f98ba651, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.62
@@ -3481,7 +3485,7 @@ PrefabInstance:
     - target: {fileID: 6672992475104339469, guid: 43f2570232355fb449838870f98ba651, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 543450652870617150}
     - target: {fileID: 6672992475104339469, guid: 43f2570232355fb449838870f98ba651, type: 3}
       propertyPath: restTime
       value: 0
@@ -27474,7 +27478,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2037432249}
-  m_LocalRotation: {x: 0.13378078, y: 3.797302e-15, z: -4.612827e-16, w: 0.99101096}
+  m_LocalRotation: {x: 0.1337808, y: -0.000000033020495, z: 0.000000004457578, w: 0.99101096}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -29369,6 +29373,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 2547066391442385810, guid: b782f0ead77882f4c8a7a7c927123441, type: 3}
+      propertyPath: jumpForce
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2547066391442385811, guid: b782f0ead77882f4c8a7a7c927123441, type: 3}
       propertyPath: checkpointText
       value: 
