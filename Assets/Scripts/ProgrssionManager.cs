@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ProgrssionManager : MonoBehaviour
 {
@@ -14,6 +15,14 @@ public class ProgrssionManager : MonoBehaviour
     //Arrays
     public List<GameObject> leleusButtons;
     public List<GameObject> lisbelasButtons;
+
+    //photos
+    [SerializeField] private Image imageMap;
+    [SerializeField] private Image imageCredtis;
+    [SerializeField] private Image imageExtras;
+    [SerializeField] private Image imageExtras2;
+    [SerializeField] List<Sprite> images;
+
 
     //Static Int
     public static int currentlevel = 1;
