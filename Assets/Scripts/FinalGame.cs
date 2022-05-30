@@ -19,6 +19,7 @@ public class FinalGame : MonoBehaviour
             if (LisbelaLevelOne)
             {
                 ProgrssionManager.leleuFirstLevel = true;
+                ProgrssionManager.lisbelaFirstlevel = true;
             }
             if (LisbelaLevelTwo)
             {

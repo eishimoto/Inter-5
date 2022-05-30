@@ -8,7 +8,8 @@ public class ProgrssionManager : MonoBehaviour
     //Bools
     public static bool leleuFirstLevel;
     public static bool leleuSecondLevel;
-    public static bool leleuThirdLevel;   
+    public static bool leleuThirdLevel;
+    public static bool lisbelaFirstlevel;
     public static bool lisbelaSecondLevel;
     public static bool lisbelaThirdLevel;
 
@@ -22,7 +23,6 @@ public class ProgrssionManager : MonoBehaviour
     [SerializeField] private Image imageExtras;
     [SerializeField] private Image imageExtras2;
     [SerializeField] List<Sprite> images;
-
 
     //Static Int
     public static int currentlevel = 1;
@@ -52,34 +52,30 @@ public class ProgrssionManager : MonoBehaviour
 
     private void ConditionToEnableLevels()
     {
+        if(lisbelaFirstlevel)
+        {
+            imageMap.sprite = images[0];
+        }
         if(leleuFirstLevel)
         {
             leleusButtons[0].SetActive(true);
             currentlevel = 2;
+            //imageMap.sprite = images[0];
         }
-
-        if (leleuSecondLevel)
-        {
-            leleusButtons[1].SetActive(true);
-            currentlevel = 4;
-        }
-
-        if(leleuThirdLevel && lisbelaThirdLevel)
-        {
-            leleusButtons[2].SetActive(true);
-            currentlevel = 6;
-        }
-
         if (lisbelaSecondLevel)
         {
             lisbelasButtons[0].SetActive(true);
             currentlevel = 3;
+            imageCredtis.sprite = images[1];
         }
-        if (lisbelaThirdLevel)
+        if (leleuSecondLevel)
         {
-            lisbelasButtons[1].SetActive(true);
-            currentlevel = 5;
+            leleusButtons[1].SetActive(true);
+            currentlevel = 4;
+            imageExtras.sprite = images[2];
+            imageExtras2.sprite = images[3];
         }
+
     }
     private void ConditionToEnableLevels2()
     {
@@ -90,21 +86,12 @@ public class ProgrssionManager : MonoBehaviour
 
         if (leleuSecondLevel)
         {
-            currentlevel = 4;
-        }
-
-        if (leleuThirdLevel && lisbelaThirdLevel)
-        {
-            currentlevel = 6;
+            currentlevel = 3;
         }
 
         if (lisbelaSecondLevel)
         {
-            currentlevel = 3;
-        }
-        if (lisbelaThirdLevel)
-        {
-            currentlevel = 5;
+            currentlevel = 4;
         }
     }
 
@@ -113,40 +100,30 @@ public class ProgrssionManager : MonoBehaviour
         if (currentlevel == 2)
         {
             leleusButtons[0].SetActive(true);
+            imageMap.sprite = images[0];
         }
         if (currentlevel == 3)
         {
             leleusButtons[0].SetActive(true);
-            lisbelasButtons[0].SetActive(true);
+            lisbelasButtons[1].SetActive(true);
+            imageMap.sprite = images[0];
+            imageCredtis.sprite = images[1];
         }
         if (currentlevel == 4)
         {
             leleusButtons[0].SetActive(true);
             lisbelasButtons[0].SetActive(true);
             leleusButtons[1].SetActive(true);
-        }
-        if (currentlevel == 5)
-        {
-            leleusButtons[0].SetActive(true);
-            lisbelasButtons[0].SetActive(true);
-            leleusButtons[1].SetActive(true);
-            lisbelasButtons[1].SetActive(true);
-        }
-        if (currentlevel == 6)
-        {
-            leleusButtons[0].SetActive(true);
-            lisbelasButtons[0].SetActive(true);
-            leleusButtons[1].SetActive(true);
-            lisbelasButtons[1].SetActive(true);
-            leleusButtons[2].SetActive(true);
+            imageMap.sprite = images[0];
+            imageCredtis.sprite = images[1];
+            imageExtras.sprite = images[2];
+            imageExtras2.sprite = images[3];
         }
         if(currentlevel == 0)
         {
             leleusButtons[0].SetActive(false);
-            lisbelasButtons[0].SetActive(false);
             leleusButtons[1].SetActive(false);
             lisbelasButtons[1].SetActive(false);
-            leleusButtons[2].SetActive(false);
         }
 
         PlayerPrefs.SetInt("currentlevel", currentlevel);

@@ -2748,6 +2748,15 @@ MonoBehaviour:
   - {fileID: 281997982}
   lisbelasButtons:
   - {fileID: 447210350}
+  imageMap: {fileID: 1947189542}
+  imageCredtis: {fileID: 1456771225}
+  imageExtras: {fileID: 400592404}
+  imageExtras2: {fileID: 1147153996}
+  images:
+  - {fileID: 21300000, guid: 4ed5b763169534d4784a278db5badbf2, type: 3}
+  - {fileID: 21300000, guid: 76f9b3596ff154744b54748948f0ae5e, type: 3}
+  - {fileID: 21300000, guid: 63e7a49eafc387e478fd8cd6680e72b7, type: 3}
+  - {fileID: 21300000, guid: 4857394f1ea4bf147bfb9645f64ad5b8, type: 3}
 --- !u!1 &1279420189
 GameObject:
   m_ObjectHideFlags: 0
