@@ -5,7 +5,7 @@ using TMPro;
 
 public class KeyCount : MonoBehaviour
 {
-    public GameObject keyPrompt;
+    public TextMeshProUGUI keyPrompt;
     private AudioSource audioSource;
     [SerializeField] private AudioClip keyPickup;
 
@@ -20,7 +20,7 @@ public class KeyCount : MonoBehaviour
     {
         if(playerIsClose)
         {
-            keyPrompt.SetActive(true);
+            keyPrompt.text = "Pressione F";
 
             if (Input.GetKeyDown(KeyCode.F))
             {
@@ -30,7 +30,7 @@ public class KeyCount : MonoBehaviour
         }
         else if (!playerIsClose)
         {
-            keyPrompt.SetActive(false);
+            keyPrompt.text = "";
         }
     }
 
@@ -54,5 +54,10 @@ public class KeyCount : MonoBehaviour
         yield return new WaitForSeconds(1f);
         UnlockDoor.keys++;
         gameObject.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        keyPrompt.text = "";
     }
 }
