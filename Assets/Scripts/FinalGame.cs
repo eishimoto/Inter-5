@@ -33,7 +33,6 @@ public class FinalGame : MonoBehaviour
             SceneManager.LoadScene(index);
         }
     }
-
     private void FinalGamePanel()
     {
         Time.timeScale = 0;
