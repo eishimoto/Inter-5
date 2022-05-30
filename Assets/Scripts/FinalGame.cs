@@ -19,6 +19,7 @@ public class FinalGame : MonoBehaviour
             if (LisbelaLevelOne)
             {
                 ProgrssionManager.leleuFirstLevel = true;
+                ProgrssionManager.lisbelaFirstlevel = true;
             }
             if (LisbelaLevelTwo)
             {
@@ -32,7 +33,6 @@ public class FinalGame : MonoBehaviour
             SceneManager.LoadScene(index);
         }
     }
-
     private void FinalGamePanel()
     {
         Time.timeScale = 0;

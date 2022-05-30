@@ -5,30 +5,59 @@ using TMPro;
 
 public class KeyCount : MonoBehaviour
 {
-    public GameObject keyPrompt;
-    private void OnTriggerStay(Collider other)
+    public TextMeshProUGUI keyPrompt;
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip keyPickup;
+
+    private bool playerIsClose;
+    private void Start()
     {
-        if (other.gameObject.CompareTag("Player"))
+        audioSource = GetComponent<AudioSource>();
+        playerIsClose = false;
+    }
+
+    private void Update()
+    {
+        if(playerIsClose)
         {
-            keyPrompt.SetActive(true);
+            keyPrompt.text = "Pressione F";
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                UnlockDoor.keys++;
-                gameObject.SetActive(false);
+                audioSource.PlayOneShot(keyPickup);
+                StartCoroutine(KeyPrompt());
             }
+        }
+        else if (!playerIsClose)
+        {
+            keyPrompt.text = "";
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            playerIsClose = true;
+        }
+    }
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            keyPrompt.SetActive(false);
+            playerIsClose = false;
         }
     }
+
+    IEnumerator KeyPrompt()
+    {
+        yield return new WaitForSeconds(1f);
+        UnlockDoor.keys++;
+        gameObject.SetActive(false);
+    }
+
     private void OnDisable()
     {
-        keyPrompt.SetActive(false);
+        keyPrompt.text = "";
     }
 }

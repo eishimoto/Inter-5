@@ -11,7 +11,6 @@ public class ChangeCamControl : MonoBehaviour
 
     [SerializeField] private Image[] arrows;
     [SerializeField] private Sprite arrowSprites;
-    [SerializeField] private Sprite arrowSpritesblack;
 
     [SerializeField] private GameObject Lisbela;
     [SerializeField] private GameObject Cam;
@@ -24,10 +23,10 @@ public class ChangeCamControl : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        arrows[0].sprite = arrowSprites;
-        arrows[1].sprite = arrowSpritesblack;
-        arrows[2].sprite = arrowSpritesblack;
-        arrows[3].sprite = arrowSpritesblack;
+        arrows[0].color = new Color(255, 255, 255, 0);
+        arrows[1].color = Color.white;
+        arrows[2].color = new Color(255, 255, 255, 0);
+        arrows[3].color = new Color(255, 255, 255, 0);
     }
 
     void Update()
@@ -47,10 +46,10 @@ public class ChangeCamControl : MonoBehaviour
             cam[2].gameObject.SetActive(true);
             cam[1].gameObject.SetActive(false);
             cam[0].gameObject.SetActive(false);
-            arrows[0].sprite = arrowSpritesblack;
-            arrows[1].sprite = arrowSpritesblack;
-            arrows[2].sprite = arrowSprites;
-            arrows[3].sprite = arrowSpritesblack;
+            arrows[0].color = new Color(255, 255, 255, 0);
+            arrows[1].color = new Color(255, 255, 255, 0);
+            arrows[2].color = Color.white;
+            arrows[3].color = new Color(255, 255, 255, 0);
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
@@ -59,10 +58,10 @@ public class ChangeCamControl : MonoBehaviour
             cam[2].gameObject.SetActive(false);
             cam[1].gameObject.SetActive(false);
             cam[0].gameObject.SetActive(true);
-            arrows[0].sprite = arrowSprites;
-            arrows[1].sprite = arrowSpritesblack;
-            arrows[2].sprite = arrowSpritesblack;
-            arrows[3].sprite = arrowSpritesblack;
+            arrows[0].color = Color.white;
+            arrows[1].color = new Color(255, 255, 255, 0);
+            arrows[2].color = new Color(255, 255, 255, 0);
+            arrows[3].color = new Color(255, 255, 255, 0);
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
@@ -71,10 +70,10 @@ public class ChangeCamControl : MonoBehaviour
             cam[2].gameObject.SetActive(false);
             cam[1].gameObject.SetActive(false);
             cam[0].gameObject.SetActive(false);
-            arrows[0].sprite = arrowSpritesblack;
-            arrows[1].sprite = arrowSpritesblack;
-            arrows[2].sprite = arrowSpritesblack;
-            arrows[3].sprite = arrowSprites;
+            arrows[0].color = new Color(255, 255, 255, 0);
+            arrows[1].color = new Color(255, 255, 255, 0);
+            arrows[2].color = new Color(255, 255, 255, 0);
+            arrows[3].color = Color.white;
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
@@ -83,10 +82,10 @@ public class ChangeCamControl : MonoBehaviour
             cam[2].gameObject.SetActive(false);
             cam[1].gameObject.SetActive(true);
             cam[0].gameObject.SetActive(false);
-            arrows[0].sprite = arrowSpritesblack;
-            arrows[1].sprite = arrowSprites;
-            arrows[2].sprite = arrowSpritesblack;
-            arrows[3].sprite = arrowSpritesblack;
+            arrows[0].color = new Color(255, 255, 255, 0);
+            arrows[1].color = Color.white;
+            arrows[2].color = new Color(255, 255, 255, 0);
+            arrows[3].color = new Color(255, 255, 255, 0);
         }
     }
     
@@ -110,19 +109,19 @@ public class ChangeCamControl : MonoBehaviour
 
             foreach (var item in arrows)
             {
-                item.sprite = arrowSpritesblack;
+                item.sprite = null;
             }
             currentArrow++;
             if(currentArrow < arrows.Length)
             {
-                arrows[currentArrow - 1].sprite = arrowSpritesblack;
-                arrows[currentArrow].sprite = arrowSprites;
+                arrows[currentArrow - 1].color = new Color(255, 255, 255, 0);
+                arrows[currentArrow].color = Color.white;
             }
             else
             {
-                arrows[currentArrow - 1].sprite = arrowSpritesblack;
+                arrows[currentArrow - 1].color = new Color(255, 255, 255, 0);
                 currentArrow = 0;
-                arrows[currentArrow].sprite = arrowSprites;
+                arrows[currentArrow].color = Color.white;
             }
         }
     }
