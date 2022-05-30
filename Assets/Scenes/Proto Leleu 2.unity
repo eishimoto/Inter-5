@@ -19514,7 +19514,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.10673807, y: -0.000000008554102, z: 9.1828134e-10, w: 0.9942872}
+  m_LocalRotation: {x: 0.10673807, y: 0.000000008554102, z: -9.1828134e-10, w: 0.9942872}
   m_LocalPosition: {x: 0, y: 4.959179, z: -8.534343}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -23780,6 +23780,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.025125045, y: 0.025125042, z: 0.021336647}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1226229480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2547066390891392350, guid: b782f0ead77882f4c8a7a7c927123441, type: 3}
+  m_PrefabInstance: {fileID: 2547066391734887497}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1232982459 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bb813c0e65a1a02488065c8c5ec684b9, type: 3}
@@ -27419,7 +27424,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481472046}
-  m_LocalRotation: {x: 0.106738046, y: -0.000000008554043, z: 9.1828767e-10, w: 0.9942872}
+  m_LocalRotation: {x: 0.106738046, y: 0.000000008554043, z: -9.1828767e-10, w: 0.9942872}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -40153,6 +40158,10 @@ PrefabInstance:
       propertyPath: jumpForce
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2547066391442385810, guid: b782f0ead77882f4c8a7a7c927123441, type: 3}
+      propertyPath: particleSmoke
+      value: 
+      objectReference: {fileID: 1226229480}
     - target: {fileID: 2547066391442385811, guid: b782f0ead77882f4c8a7a7c927123441, type: 3}
       propertyPath: checkpointText
       value: 

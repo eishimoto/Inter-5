@@ -9,6 +9,7 @@ public class MoveChar : MonoBehaviour
     [SerializeField] private float sprintSpeed = 6f;
     [SerializeField] private float jumpForce;
     [SerializeField] private float rotationSpeed;
+    [SerializeField] private GameObject particleSmoke;
     
     [SerializeField] private bool backwardsLevel;
 
@@ -56,6 +57,7 @@ public class MoveChar : MonoBehaviour
             mySpeedY = 0;
             mySpeedY += Mathf.Sqrt(jumpForce * -2 * myGravity);
             audioSource.Stop();
+            particleSmoke.SetActive(false);
         }
 
         if (!controller.isGrounded)
@@ -70,11 +72,12 @@ public class MoveChar : MonoBehaviour
         if (myJumping && mySpeedY <= 0)
         {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, Vector3.down, out hit, 2f, LayerMask.GetMask("Ground")))
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, 0.5f, LayerMask.GetMask("Ground")))
             {
                 Debug.DrawRay(transform.position, Vector3.down * 3f, Color.blue);
                 myJumping = false;
                 animator.SetBool("isJumping", false);
+                particleSmoke.SetActive(true);
             }
         }
 
