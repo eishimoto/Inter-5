@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class PlayerCheckpoint : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class PlayerCheckpoint : MonoBehaviour
     [SerializeField] private TextMeshProUGUI checkpointText;
 
     private bool canBeDetected;
+    [SerializeField] private Image AIButton;
+    [SerializeField] private Sprite[] AISprite;
     void Start()
     {
         canBeDetected = true;
@@ -95,7 +98,16 @@ public class PlayerCheckpoint : MonoBehaviour
     }
     public void CanBeDetedtedTurnOFF()
     {
-        canBeDetected = false;
+        if (canBeDetected)
+        {
+            canBeDetected = false;
+            AIButton.sprite = AISprite[0];
+        }
+        else
+        {
+            canBeDetected = true;
+            AIButton.sprite = AISprite[1];
+        }
     }
 
     IEnumerator ClearText()
