@@ -9,6 +9,7 @@ public class PlayVideo : MonoBehaviour
     [SerializeField] RawImage rawImage;
     [SerializeField] VideoPlayer videoPlayer;
     [SerializeField] GameObject blackscreen;
+    [SerializeField] GameObject videoPlayerObject;
     void Start()
     {
         StartCoroutine(PlayVideoCoroutine());
@@ -26,5 +27,12 @@ public class PlayVideo : MonoBehaviour
         rawImage.texture = videoPlayer.texture;
         videoPlayer.Play();
         blackscreen.SetActive(false);
+        StartCoroutine(FadeIn());
+    }
+
+    IEnumerator FadeIn()
+    {
+        yield return new WaitForSeconds(22);
+        videoPlayerObject.SetActive(true);
     }
 }
