@@ -2574,7 +2574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &439416836
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4265,8 +4265,8 @@ Avatar:
     1019357085: Panel/Palito (4)
     2084503132: "Panel/Fuma\xE7a 5"
     1758154188: Panel2/Parafuso
-    3851819146: Panel/Palito (1)/2 (1)
     3119249175: Panel/Palito
+    3851819146: Panel/Palito (1)/2 (1)
     988486915: Panel/Estante
     1938010458: Panel/Palito (3)
     634984156: Panel/Palito (5)
@@ -8828,7 +8828,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1414093672
 RectTransform:
   m_ObjectHideFlags: 0
