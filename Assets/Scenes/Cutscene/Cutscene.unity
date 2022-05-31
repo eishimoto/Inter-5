@@ -303,7 +303,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1818385530}
-  m_RootOrder: 9
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -379,7 +379,7 @@ RectTransform:
   m_Children:
   - {fileID: 1866774683}
   m_Father: {fileID: 1818385530}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1569,7 +1569,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1818385530}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1720,7 +1720,7 @@ RectTransform:
   m_Children:
   - {fileID: 2102185358}
   m_Father: {fileID: 1818385530}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1934,7 +1934,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &439416836
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2119,7 +2119,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1818385530}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2270,7 +2270,7 @@ RectTransform:
   m_Children:
   - {fileID: 450929820}
   m_Father: {fileID: 1818385530}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3235,8 +3235,8 @@ Avatar:
     1019357085: Panel/Palito (4)
     2084503132: "Panel/Fuma\xE7a 5"
     1758154188: Panel2/Parafuso
-    3851819146: Panel/Palito (1)/2 (1)
     3119249175: Panel/Palito
+    3851819146: Panel/Palito (1)/2 (1)
     988486915: Panel/Estante
     1938010458: Panel/Palito (3)
     634984156: Panel/Palito (5)
@@ -4563,7 +4563,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1818385530}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5085,7 +5085,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1818385530}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6566,7 +6566,7 @@ RectTransform:
   m_Children:
   - {fileID: 886549346}
   m_Father: {fileID: 1818385530}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7440,7 +7440,7 @@ RectTransform:
   m_Children:
   - {fileID: 699922734}
   m_Father: {fileID: 1818385530}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7577,7 +7577,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1818385530
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7598,7 +7598,6 @@ RectTransform:
   - {fileID: 1775881912}
   - {fileID: 723029167}
   - {fileID: 1809815072}
-  - {fileID: 11056068}
   - {fileID: 338043903}
   - {fileID: 1173354334}
   - {fileID: 354204247}
@@ -7608,6 +7607,7 @@ RectTransform:
   - {fileID: 1017063232}
   - {fileID: 483857727}
   - {fileID: 1570388138}
+  - {fileID: 11056068}
   - {fileID: 1665398711}
   - {fileID: 1103771840}
   - {fileID: 189706281}
