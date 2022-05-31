@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseScreen;
+    [SerializeField] private GameObject UI;
     private bool isPaused;
 
     [SerializeField] private GameObject textBox;
@@ -13,7 +14,7 @@ public class UIManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1;
-        //StartCoroutine(OpenTextBox());
+        StartCoroutine(OpenTextBox());
     }
 
     void Update()
@@ -51,7 +52,8 @@ public class UIManager : MonoBehaviour
 
     IEnumerator OpenTextBox()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         textBox.SetActive(true);
+        UI.SetActive(false);
     }
 }

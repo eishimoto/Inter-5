@@ -8,7 +8,9 @@ public class TextBox : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI textBox;
     [SerializeField] private List<string> textToWrite;
-    
+    [SerializeField] private GameObject nextTextBox;
+    [SerializeField] private GameObject UI;
+
     private int index;
     
     [SerializeField] private float typingSpeed;
@@ -89,8 +91,8 @@ public class TextBox : MonoBehaviour
 
     public void CloseTextBoxButton()
     {
-        gameObject.SetActive(false);
-       // Cursor.lockState = CursorLockMode.Locked;
+        Destroy(gameObject);
+        //Cursor.lockState = CursorLockMode.Locked;
     }
     public void FinalTextPanel()
     {
@@ -105,12 +107,14 @@ public class TextBox : MonoBehaviour
         else
         {
             finalButton.SetActive(true);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 
     private void OnDisable()
     {
+        nextTextBox.SetActive(true);
+        UI.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
     }
 }
