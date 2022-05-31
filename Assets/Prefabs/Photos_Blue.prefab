@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3850395949855169018}
   - component: {fileID: 833615059980231978}
   m_Layer: 0
-  m_Name: Photos1
+  m_Name: Photos_Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
