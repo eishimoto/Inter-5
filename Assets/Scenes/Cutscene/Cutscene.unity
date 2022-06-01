@@ -1723,6 +1723,7 @@ GameObject:
   - component: {fileID: 305984568}
   - component: {fileID: 305984567}
   - component: {fileID: 305984566}
+  - component: {fileID: 305984571}
   m_Layer: 5
   m_Name: Canvas1
   m_TagString: Untagged
@@ -1834,6 +1835,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &305984571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305984565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83de712368032094d845b8c65074a5af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &316833220
 GameObject:
   m_ObjectHideFlags: 0
@@ -4326,8 +4339,8 @@ Avatar:
     1019357085: Panel/Palito (4)
     2084503132: "Panel/Fuma\xE7a 5"
     1758154188: Panel2/Parafuso
-    3851819146: Panel/Palito (1)/2 (1)
     3119249175: Panel/Palito
+    3851819146: Panel/Palito (1)/2 (1)
     988486915: Panel/Estante
     1938010458: Panel/Palito (3)
     634984156: Panel/Palito (5)
