@@ -18,7 +18,7 @@ public class PlayVideo : MonoBehaviour
     IEnumerator PlayVideoCoroutine()
     {
         videoPlayer.Prepare();
-        WaitForSeconds waitForSeconds = new WaitForSeconds(1);
+        WaitForSeconds waitForSeconds = new WaitForSeconds(2);
         while (!videoPlayer.isPrepared)
         {
             yield return waitForSeconds;
@@ -32,7 +32,7 @@ public class PlayVideo : MonoBehaviour
 
     IEnumerator FadeIn()
     {
-        yield return new WaitForSeconds(22);
+        yield return new WaitForSeconds(23);
         videoPlayerObject.SetActive(true);
     }
 }
