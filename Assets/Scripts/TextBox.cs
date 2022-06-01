@@ -38,6 +38,8 @@ public class TextBox : MonoBehaviour
         {
             continueButton.SetActive(true);
         }
+        Debug.Log(textBox);
+
         if (gameObject.activeSelf.Equals(true))
         {
             Cursor.lockState = CursorLockMode.None;
@@ -56,17 +58,17 @@ public class TextBox : MonoBehaviour
     public void NextSentence()
     {
         continueButton.SetActive(false);
-        
         if (index < textToWrite.Count - 1)
         {
             index++;
-            textBox.text = null;
+            textBox.text = "";
             StartCoroutine(Type());
         }
         else
         {
-            textBox.text = null;
-            StartCoroutine(CloseTextBox());
+            textBox.text = "";
+            Cursor.lockState = CursorLockMode.Locked;
+            gameObject.SetActive(false);
         }
     }
 
@@ -80,7 +82,7 @@ public class TextBox : MonoBehaviour
     public void CloseTextBoxButton()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     private void OnDisable()
@@ -91,6 +93,7 @@ public class TextBox : MonoBehaviour
             canFollow = true;
             Cursor.lockState = CursorLockMode.Locked;
         }
+        
         nextTextBox.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
     }
