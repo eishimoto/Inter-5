@@ -19,6 +19,7 @@ public class TextBox : MonoBehaviour
 
 
     public bool isLastBox;
+    public static bool canFollow;
     private void OnEnable()
     {
         index = 0;
@@ -28,6 +29,7 @@ public class TextBox : MonoBehaviour
     private void Start()
     {
         textBox.text = "";
+        canFollow = false;
     }
     void Update()
     {
@@ -118,6 +120,7 @@ public class TextBox : MonoBehaviour
         if(isLastBox)
         {
             UI.SetActive(true);
+            canFollow = true;
         }
         nextTextBox.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;

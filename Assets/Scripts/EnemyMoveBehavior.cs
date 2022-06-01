@@ -33,6 +33,7 @@ public class EnemyMoveBehavior : MonoBehaviour
     }
     private void Update()
     {
+        SetFollow();
         if (Vector3.Distance(transform.position, target) < 1f)
         {
             GetNextWaypoint();
@@ -58,6 +59,14 @@ public class EnemyMoveBehavior : MonoBehaviour
         {
             waypointIndex = (waypointIndex + 1) % waypoints.Count;
             waitTime = restTime;
+        }
+    }
+
+    public void SetFollow()
+    {
+        if (TextBox.canFollow)
+        {
+            follow = true;
         }
     }
 
