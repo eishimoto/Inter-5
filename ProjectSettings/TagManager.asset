@@ -12,6 +12,7 @@ TagManager:
   - DetectionArea
   - Enemy
   - Vapor
+  - Teste_Caixa
   layers:
   - Default
   - TransparentFX

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.3937059, g: 0.46523786, b: 0.5776372, a: 1}
+  m_IndirectSpecularColor: {r: 0.3928225, g: 0.4641757, b: 0.576442, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9614,6 +9614,12 @@ PrefabInstance:
       propertyPath: nextTextBox
       value: 
       objectReference: {fileID: 1367004051}
+    - target: {fileID: 4427913033571725628, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
+      propertyPath: textToWrite.Array.data[0]
+      value: "LLisbela, espero que essa carta chegue em voc\xEA! Meu amado enlouqueceu
+        e me prendeu na casa principal. Preciso que voc\xEA me ajude! Use a chave
+        junto dessa carta, deve funcionar na sua cela."
+      objectReference: {fileID: 0}
     - target: {fileID: 4427913033571725629, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9644,11 +9650,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4427913033571725629, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 2000
+      value: 2668
       objectReference: {fileID: 0}
     - target: {fileID: 4427913033571725629, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 600
+      value: 728
       objectReference: {fileID: 0}
     - target: {fileID: 4427913033571725629, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9702,6 +9708,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: TextBox_Mocinha
       objectReference: {fileID: 0}
+    - target: {fileID: 4427913033571725630, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427913033576354396, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427913033576354396, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427913033576354396, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12.300049
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427913033576354396, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427913034160232278, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 147
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427913034160232278, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 142
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427913034160232278, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -88
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427913034160232278, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 127
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
 --- !u!1001 &8013143802156889014
@@ -9711,6 +9753,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17687775}
     m_Modifications:
+    - target: {fileID: 8013143801614571755, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 147
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013143801614571755, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 142
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013143801614571755, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -88
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013143801614571755, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 127
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013143802506223920, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013143802506223920, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013143802506223920, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12.300049
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013143802506223920, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8013143803484823586, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9741,11 +9815,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8013143803484823586, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 2000
+      value: 2668
       objectReference: {fileID: 0}
     - target: {fileID: 8013143803484823586, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 600
+      value: 728
       objectReference: {fileID: 0}
     - target: {fileID: 8013143803484823586, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9799,9 +9873,17 @@ PrefabInstance:
       propertyPath: UI
       value: 
       objectReference: {fileID: 1512238198}
+    - target: {fileID: 8013143803484823587, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
+      propertyPath: textToWrite.Array.data[0]
+      value: MMeu Deus...
+      objectReference: {fileID: 0}
     - target: {fileID: 8013143803484823589, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
       propertyPath: m_Name
       value: TextBox_Lisbela
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013143803484823589, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
