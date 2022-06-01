@@ -10261,7 +10261,7 @@ PrefabInstance:
       objectReference: {fileID: 1512238198}
     - target: {fileID: 8013143803484823587, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
       propertyPath: textToWrite.Array.data[0]
-      value: MMeu Deus...
+      value: ' Meu Deus...'
       objectReference: {fileID: 0}
     - target: {fileID: 8013143803484823589, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
       propertyPath: m_Name

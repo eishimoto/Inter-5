@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class TextBox : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI textBox;
-    [SerializeField] private List<string> textToWrite;
+    [SerializeField] private string[] textToWrite;
     [SerializeField] private GameObject nextTextBox;
     [SerializeField] private GameObject UI;
 
@@ -22,13 +22,13 @@ public class TextBox : MonoBehaviour
     public static bool canFollow;
     private void OnEnable()
     {
-        index = 0;
-        StartCoroutine(Type());
         Cursor.lockState = CursorLockMode.None;
     }
     private void Start()
     {
+        index = 0;
         textBox.text = "";
+        StartCoroutine(Type());
         canFollow = false;
     }
        
@@ -38,7 +38,6 @@ public class TextBox : MonoBehaviour
         {
             continueButton.SetActive(true);
         }
-        Debug.Log(textBox);
 
         if (gameObject.activeSelf.Equals(true))
         {
@@ -58,7 +57,7 @@ public class TextBox : MonoBehaviour
     public void NextSentence()
     {
         continueButton.SetActive(false);
-        if (index < textToWrite.Count - 1)
+        if (index < textToWrite.Length - 1)
         {
             index++;
             textBox.text = "";
