@@ -16,9 +16,9 @@ public class Collectables : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            collectSound.PlayOneShot(collectClip);
             Destroy(gameObject);
             updateScore.AddPoints();
-            collectSound.PlayOneShot(collectClip);
         }
     }
 }
