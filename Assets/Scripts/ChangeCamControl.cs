@@ -109,8 +109,10 @@ public class ChangeCamControl : MonoBehaviour
 
             foreach (var item in arrows)
             {
+                item.color = Color.white;
                 item.color = new Color(255, 255, 255, 0);
             }
+            
             currentArrow++;
             if(currentArrow < arrows.Length)
             {

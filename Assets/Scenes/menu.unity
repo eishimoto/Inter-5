@@ -3448,7 +3448,7 @@ MonoBehaviour:
   extras:
   - {fileID: 61730341}
   - {fileID: 485242992}
-  buttonClick: {fileID: 8300000, guid: e912d064b03af0d418d7dc859ccdc38d, type: 3}
+  buttonClick: {fileID: 8300000, guid: b18bcd691a3bbf746b9992024bf136c7, type: 3}
 --- !u!4 &1439201819
 Transform:
   m_ObjectHideFlags: 0

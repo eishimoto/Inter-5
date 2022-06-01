@@ -5724,7 +5724,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 226220592}
-  m_LocalRotation: {x: 0.038697135, y: 0.0000000037225, z: -1.4415806e-10, w: 0.999251}
+  m_LocalRotation: {x: 0.038697135, y: 0.0000000037224999, z: -1.4415805e-10, w: 0.999251}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6810,7 +6810,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257365186}
-  m_LocalRotation: {x: 0.07325613, y: -0.0000000044987276, z: 2.9978295e-10, w: 0.9973132}
+  m_LocalRotation: {x: 0.07325613, y: -0.0000000044987276, z: 2.997829e-10, w: 0.9973132}
   m_LocalPosition: {x: 0.09779766, y: 5, z: -9.925199}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -9607,7 +9607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4427913033571725628, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
       propertyPath: textToWrite.Array.data[0]
-      value: "CComo est\xE3o as coisas a\xED, Lel\xE9u?"
+      value: " Como est\xE3o as coisas a\xED, Lel\xE9u?"
       objectReference: {fileID: 0}
     - target: {fileID: 4427913033571725629, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
       propertyPath: m_Pivot.x
@@ -9712,7 +9712,7 @@ PrefabInstance:
     - target: {fileID: 4427913033576354371, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 8300000, guid: e912d064b03af0d418d7dc859ccdc38d, type: 3}
+      objectReference: {fileID: 8300000, guid: b18bcd691a3bbf746b9992024bf136c7, type: 3}
     - target: {fileID: 4427913033576354396, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
       propertyPath: m_SizeDelta.x
       value: 120
@@ -9736,7 +9736,7 @@ PrefabInstance:
     - target: {fileID: 4427913034160232277, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 8300000, guid: e912d064b03af0d418d7dc859ccdc38d, type: 3}
+      objectReference: {fileID: 8300000, guid: b18bcd691a3bbf746b9992024bf136c7, type: 3}
     - target: {fileID: 4427913034160232278, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
       propertyPath: m_SizeDelta.x
       value: 147
@@ -12849,7 +12849,7 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: e912d064b03af0d418d7dc859ccdc38d, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: b18bcd691a3bbf746b9992024bf136c7, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -15796,7 +15796,7 @@ PrefabInstance:
     - target: {fileID: 2973726099405950294, guid: 0ba73c63e5b5a4a4eb04cf46b448694c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 8300000, guid: e912d064b03af0d418d7dc859ccdc38d, type: 3}
+      objectReference: {fileID: 8300000, guid: b18bcd691a3bbf746b9992024bf136c7, type: 3}
     - target: {fileID: 2973726099830495059, guid: 0ba73c63e5b5a4a4eb04cf46b448694c, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -15811,7 +15811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2973726099841975012, guid: 0ba73c63e5b5a4a4eb04cf46b448694c, type: 3}
       propertyPath: textToWrite.Array.data[0]
-      value: "FFrederico n\xE3o me deixa em paz, meu Deus! Mas agora falta pouco,
+      value: " Frederico n\xE3o me deixa em paz, meu Deus! Mas agora falta pouco,
         preciso coletar os ingredientes que faltam e voltar para o cinema! "
       objectReference: {fileID: 0}
     - target: {fileID: 2973726099841975018, guid: 0ba73c63e5b5a4a4eb04cf46b448694c, type: 3}
@@ -15933,7 +15933,7 @@ PrefabInstance:
     - target: {fileID: 2973726100190467083, guid: 0ba73c63e5b5a4a4eb04cf46b448694c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 8300000, guid: e912d064b03af0d418d7dc859ccdc38d, type: 3}
+      objectReference: {fileID: 8300000, guid: b18bcd691a3bbf746b9992024bf136c7, type: 3}
     m_RemovedComponents:
     - {fileID: 1029994419730682793, guid: 0ba73c63e5b5a4a4eb04cf46b448694c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0ba73c63e5b5a4a4eb04cf46b448694c, type: 3}
@@ -32093,7 +32093,7 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: e912d064b03af0d418d7dc859ccdc38d, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: b18bcd691a3bbf746b9992024bf136c7, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0

@@ -80,7 +80,7 @@ public class TextBox : MonoBehaviour
     
     public void CloseTextBoxButton()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+       Cursor.lockState = CursorLockMode.Locked;
         gameObject.SetActive(false);
     }
 
