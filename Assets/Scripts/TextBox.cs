@@ -31,6 +31,7 @@ public class TextBox : MonoBehaviour
         textBox.text = "";
         canFollow = false;
     }
+       
     void Update()
     {
         if (textBox.text == textToWrite[index])
@@ -72,47 +73,14 @@ public class TextBox : MonoBehaviour
     IEnumerator CloseTextBox()
     {
         yield return new WaitForSeconds(0.02f);
+        Cursor.lockState = CursorLockMode.Locked;
         gameObject.SetActive(false);
     }
     
-    public void NextSentenceIntro()
-    {
-        continueButton.SetActive(false);
-
-        if (index < textToWrite.Count - 1)
-        {
-            index++;
-            textBox.text = null;
-            StartCoroutine(Type());
-        }
-        else
-        {
-            textBox.text = null;
-            StartCoroutine(CloseTextBox());
-            //Cursor.lockState = CursorLockMode.Locked;
-        }
-    }
-
     public void CloseTextBoxButton()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         Destroy(gameObject);
-        //Cursor.lockState = CursorLockMode.Locked;
-    }
-    public void FinalTextPanel()
-    {
-        continueButton.SetActive(true);
-
-        if (index < textToWrite.Count - 1)
-        {
-            index++;
-            textBox.text = null;
-            StartCoroutine(Type());
-        }
-        else
-        {
-            finalButton.SetActive(true);
-            gameObject.SetActive(false);
-        }
     }
 
     private void OnDisable()
@@ -121,6 +89,7 @@ public class TextBox : MonoBehaviour
         {
             UI.SetActive(true);
             canFollow = true;
+            Cursor.lockState = CursorLockMode.Locked;
         }
         nextTextBox.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;

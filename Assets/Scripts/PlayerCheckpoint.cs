@@ -16,7 +16,7 @@ public class PlayerCheckpoint : MonoBehaviour
     [SerializeField] private AudioSource checkAudioSource;
     [SerializeField] private AudioClip checkAudioClip;
 
-    [SerializeField] private TextMeshProUGUI checkpointText;
+    [SerializeField] private GameObject checkpointText;
 
     private bool canBeDetected;
     [SerializeField] private Image AIButton;
@@ -48,7 +48,7 @@ public class PlayerCheckpoint : MonoBehaviour
         {
             spawnPosition = other.gameObject.transform.position + new Vector3(2, 0, 0);
             checkAudioSource.PlayOneShot(checkAudioClip);
-            checkpointText.text = "Checkpoint";
+            checkpointText.SetActive(true);
             StartCoroutine(ClearText());
         }
         if (other.gameObject.CompareTag("DetectionArea"))
@@ -113,6 +113,6 @@ public class PlayerCheckpoint : MonoBehaviour
     IEnumerator ClearText()
     {
         yield return new WaitForSeconds(2f);
-        checkpointText.text = "";
+        checkpointText.SetActive(false);
     }
 }
