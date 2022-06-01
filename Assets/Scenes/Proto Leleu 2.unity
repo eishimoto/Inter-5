@@ -42713,6 +42713,7 @@ MonoBehaviour:
   enemyLight: {fileID: 0}
   restTime: 0
   follow: 0
+  leleu: 1
 --- !u!4 &6672992476029040408
 Transform:
   m_ObjectHideFlags: 0

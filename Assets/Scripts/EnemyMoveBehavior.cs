@@ -18,6 +18,7 @@ public class EnemyMoveBehavior : MonoBehaviour
 
     public static bool isDetected = false;
     public bool follow;
+    public bool leleu;
 
     private void OnEnable()
     {
@@ -26,7 +27,8 @@ public class EnemyMoveBehavior : MonoBehaviour
     private void Start()
     {
         isDetected = false;
-        //follow = false;
+        follow = false;
+        TextBox.canFollow = false;
         waitTime = restTime;
         agent = GetComponent<NavMeshAgent>();
         UpdateDestination();
@@ -39,10 +41,17 @@ public class EnemyMoveBehavior : MonoBehaviour
             GetNextWaypoint();
             UpdateDestination();
         }
-        if (isDetected || follow)
+        if (isDetected)
         {
             agent.SetDestination(player.position);
             enemyLight.color = Color.red;
+        }
+        if(leleu)
+        {
+            if (follow)
+            {
+                agent.SetDestination(player.position);
+            }
         }
     }
 
