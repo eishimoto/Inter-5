@@ -16,7 +16,9 @@ public class TextBox : MonoBehaviour
     [SerializeField] private float typingSpeed;
     [SerializeField] private GameObject continueButton;
     [SerializeField] private GameObject finalButton;
-    
+
+
+    public bool isLastBox;
     private void OnEnable()
     {
         index = 0;
@@ -96,7 +98,7 @@ public class TextBox : MonoBehaviour
     }
     public void FinalTextPanel()
     {
-        continueButton.SetActive(false);
+        continueButton.SetActive(true);
 
         if (index < textToWrite.Count - 1)
         {
@@ -113,8 +115,11 @@ public class TextBox : MonoBehaviour
 
     private void OnDisable()
     {
+        if(isLastBox)
+        {
+            UI.SetActive(true);
+        }
         nextTextBox.SetActive(true);
-        UI.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
     }
 }
