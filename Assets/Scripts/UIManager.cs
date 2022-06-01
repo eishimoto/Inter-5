@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseScreen;
     [SerializeField] private GameObject UI;
+    [SerializeField] private GameObject pausetext;
     private bool isPaused;
 
     [SerializeField] private GameObject textBox;
@@ -30,6 +31,7 @@ public class UIManager : MonoBehaviour
             Time.timeScale = 0;
             isPaused = true;
             Cursor.lockState = CursorLockMode.None;
+            Destroy(pausetext);
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && isPaused)
         {
