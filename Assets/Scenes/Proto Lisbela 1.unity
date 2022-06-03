@@ -9905,7 +9905,7 @@ PrefabInstance:
       objectReference: {fileID: 1367004051}
     - target: {fileID: 4427913033571725628, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
       propertyPath: textToWrite.Array.data[0]
-      value: " Lisbela, espero que essa carta chegue em voc\xEA! Meu amado enlouqueceu
+      value: "Lisbela, espero que essa carta chegue em voc\xEA! Meu amado enlouqueceu
         e me prendeu na casa principal. Preciso que voc\xEA me ajude! Use a chave
         junto dessa carta, deve funcionar na sua cela."
       objectReference: {fileID: 0}
@@ -10221,7 +10221,7 @@ PrefabInstance:
       objectReference: {fileID: 1512238198}
     - target: {fileID: 8013143803484823587, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
       propertyPath: textToWrite.Array.data[0]
-      value: ' Meu Deus...'
+      value: Meu Deus...
       objectReference: {fileID: 0}
     - target: {fileID: 8013143803484823589, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
       propertyPath: m_Name

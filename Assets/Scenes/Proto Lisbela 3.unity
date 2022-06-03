@@ -13240,7 +13240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8013143803484823587, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
       propertyPath: textToWrite.Array.data[0]
-      value: " Certo, consegui escapar do bunker! Agora preciso chegar na mans\xE3o\u2026
+      value: "Certo, consegui escapar do bunker! Agora preciso chegar na mans\xE3o\u2026
         O port\xE3o parece fechado, vou precisar encontrar um jeito de abrir! "
       objectReference: {fileID: 0}
     - target: {fileID: 8013143803484823589, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
