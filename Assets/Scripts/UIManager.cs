@@ -60,8 +60,8 @@ public class UIManager : MonoBehaviour
     IEnumerator OpenTextBox()
     {
         yield return new WaitForSeconds(1);
+        UI.SetActive(false);
         textBox.SetActive(true);
         pausetext.SetActive(true);
-        UI.SetActive(false);
     }
 }

@@ -10,7 +10,6 @@ public class FinalGame : MonoBehaviour
 
     public bool LisbelaLevelOne;
     public bool LisbelaLevelTwo;
-    public bool LisbelaLevelThree;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -24,12 +23,7 @@ public class FinalGame : MonoBehaviour
             if (LisbelaLevelTwo)
             {
                 ProgrssionManager.leleuSecondLevel = true;
-            }
-            if (LisbelaLevelThree)
-            {
-                ProgrssionManager.leleuThirdLevel = true;
-            }
-            
+            }          
             SceneManager.LoadScene(index);
         }
     }

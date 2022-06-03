@@ -47,7 +47,7 @@ public class ProgrssionManager : MonoBehaviour
         ConditionToEnableLevels();
         ConditionToEnableLevels2();
         PlayerPrefsSave();
-        DeletePlayerProgression();
+       // DeletePlayerProgression();
     }
 
     private void ConditionToEnableLevels()
@@ -60,11 +60,10 @@ public class ProgrssionManager : MonoBehaviour
         {
             leleusButtons[0].SetActive(true);
             currentlevel = 2;
-            //imageMap.sprite = images[0];
         }
         if (lisbelaSecondLevel)
         {
-            lisbelasButtons[0].SetActive(true);
+            lisbelasButtons[1].SetActive(true);
             currentlevel = 3;
             imageCredtis.sprite = images[1];
         }
@@ -75,7 +74,6 @@ public class ProgrssionManager : MonoBehaviour
             imageExtras.sprite = images[2];
             imageExtras2.sprite = images[3];
         }
-
     }
     private void ConditionToEnableLevels2()
     {
@@ -86,12 +84,12 @@ public class ProgrssionManager : MonoBehaviour
 
         if (leleuSecondLevel)
         {
-            currentlevel = 3;
+            currentlevel = 4;
         }
 
         if (lisbelaSecondLevel)
         {
-            currentlevel = 4;
+            currentlevel = 3;
         }
     }
 
