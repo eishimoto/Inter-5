@@ -61,6 +61,7 @@ public class UIManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         textBox.SetActive(true);
+        pausetext.SetActive(true);
         UI.SetActive(false);
     }
 }
