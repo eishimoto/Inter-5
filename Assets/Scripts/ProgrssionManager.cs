@@ -47,7 +47,7 @@ public class ProgrssionManager : MonoBehaviour
         ConditionToEnableLevels();
         ConditionToEnableLevels2();
         PlayerPrefsSave();
-       // DeletePlayerProgression();
+       //DeletePlayerProgression();
     }
 
     private void ConditionToEnableLevels()
