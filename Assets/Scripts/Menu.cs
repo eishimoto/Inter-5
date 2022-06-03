@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Animations;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class Menu : MonoBehaviour
     [SerializeField] private List<GameObject> credits;
     [SerializeField] private List<GameObject> extras;
 
+    [SerializeField] private Image LockImage;
+    [SerializeField] private List<GameObject> levelsButtons;
+    [SerializeField] private List<Sprite> lockSprite;
+
+    private bool isLock;
     private AudioSource audioSource;
     [SerializeField] private AudioClip buttonClick;
 
@@ -24,6 +30,7 @@ public class Menu : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.None;
+        isLock = true;
         audioSource = GetComponent<AudioSource>();
     }
     public void LoadFirstLevel()
@@ -114,6 +121,26 @@ public class Menu : MonoBehaviour
         foreach (GameObject extra in extras)
         {
             extra.SetActive(true);
+        }
+    }
+
+    public void UnlockALL()
+    {
+        if (isLock)
+        {
+            LockImage.sprite = lockSprite[0];
+            levelsButtons[0].SetActive(true);
+            levelsButtons[1].SetActive(true);
+            levelsButtons[2].SetActive(true);
+            isLock = false;
+        }
+        else
+        {
+            LockImage.sprite = lockSprite[1];
+            levelsButtons[0].SetActive(false);
+            levelsButtons[1].SetActive(false);
+            levelsButtons[2].SetActive(false);
+            isLock = true;
         }
     }
 
