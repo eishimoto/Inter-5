@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.3937059, g: 0.46523786, b: 0.5776372, a: 1}
+  m_IndirectSpecularColor: {r: 0.3928225, g: 0.4641757, b: 0.576442, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10148,15 +10148,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 17687775}
     m_Modifications:
+    - target: {fileID: 4427913033039182651, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
+      propertyPath: m_wordWrappingRatios
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4427913033571725628, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
       propertyPath: nextTextBox
       value: 
       objectReference: {fileID: 1367004051}
     - target: {fileID: 4427913033571725628, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
+      propertyPath: textToWrite.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427913033571725628, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
       propertyPath: textToWrite.Array.data[0]
       value: "Lisbela, espero que essa carta chegue em voc\xEA! Meu amado enlouqueceu
         e me prendeu na casa principal. Preciso que voc\xEA me ajude! Use a chave
         junto dessa carta, deve funcionar na sua cela."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427913033571725628, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
+      propertyPath: textToWrite.Array.data[2]
+      value: "Soube que, por voc\xEA n\xE3o pertencer a este mundo, voc\xEA tem a
+        habilidade de trazer cor a nossa dimens\xE3o. Caso voc\xEA precise de ajuda
+        extra, use esse poder para mexer com a realidade e acessar caminhos at\xE9
+        ent\xE3o bloqueados."
       objectReference: {fileID: 0}
     - target: {fileID: 4427913033571725629, guid: b1bfeb54c109d9b40858f78cd140638b, type: 3}
       propertyPath: m_Pivot.x
@@ -10380,6 +10395,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 8300000, guid: b18bcd691a3bbf746b9992024bf136c7, type: 3}
+    - target: {fileID: 8013143802679527169, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
+      propertyPath: m_wordWrappingRatios
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8013143803484823586, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -10471,6 +10490,10 @@ PrefabInstance:
     - target: {fileID: 8013143803484823587, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
       propertyPath: textToWrite.Array.data[0]
       value: Meu Deus...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013143803484823587, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
+      propertyPath: textToWrite.Array.data[1]
+      value: Farei meu melhor. Obrigada pela ajuda!
       objectReference: {fileID: 0}
     - target: {fileID: 8013143803484823589, guid: d2d9e92d6e140fe4abafe468fd9ecb9b, type: 3}
       propertyPath: m_Name
