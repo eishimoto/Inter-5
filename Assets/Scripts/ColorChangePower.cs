@@ -30,9 +30,12 @@ public class ColorChangePower : MonoBehaviour
 
     void Update()
     {
-        ChangeColor();
-        PostProcessingWight();
-        FillPowerBar();
+        if (UIManager.isPausedGlobal)
+        {
+            ChangeColor();
+            PostProcessingWight();
+            FillPowerBar();
+        }            
     }
     private void ChangeColor()
     {

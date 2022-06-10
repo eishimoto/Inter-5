@@ -12,16 +12,21 @@ public class UIManager : MonoBehaviour
     private bool isPaused;
 
     [SerializeField] private GameObject textBox;
+
+    public static bool isPausedGlobal;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1;
         StartCoroutine(OpenTextBox());
+        isPausedGlobal = true;
     }
 
     void Update()
     {
         Pause();
+        Debug.Log(isPausedGlobal);
     }
 
     public void Pause()
@@ -44,6 +49,14 @@ public class UIManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             UI2.SetActive(false);
+            if(isPausedGlobal)
+            {
+                isPausedGlobal = false;
+            }
+            else
+            {
+                isPausedGlobal = true;
+            }
         }
     }
 
