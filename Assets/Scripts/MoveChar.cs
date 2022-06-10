@@ -38,9 +38,12 @@ public class MoveChar : MonoBehaviour
 
     void Update()
     {
-        Movement();
-        WalkSound();
-        AnimationHandler();
+        if (UIManager.isPausedGlobal)
+        {
+            Movement();
+            WalkSound();
+            AnimationHandler();
+        }
     }
 
     private void Movement()
