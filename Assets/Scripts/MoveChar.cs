@@ -38,6 +38,10 @@ public class MoveChar : MonoBehaviour
 
     void Update()
     {
+        if(TextBox.textBoxIsOpen)
+        {
+            animator.SetTrigger("idleTrigger");
+        }
         if (TextBox.textBoxIsOpen == false)
         {
             Movement();
