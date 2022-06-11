@@ -30,7 +30,7 @@ public class ColorChangePower : MonoBehaviour
 
     void Update()
     {
-        if (UIManager.isPausedGlobal)
+        if (TextBox.textBoxIsOpen == false)
         {
             ChangeColor();
             PostProcessingWight();

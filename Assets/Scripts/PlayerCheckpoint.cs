@@ -56,7 +56,6 @@ public class PlayerCheckpoint : MonoBehaviour
             if (canBeDetected)
             {
                 EnemyMoveBehavior.isDetected = true;
-                Debug.Log(EnemyMoveBehavior.isDetected);
             }
         }
 

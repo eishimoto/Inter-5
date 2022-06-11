@@ -20,6 +20,7 @@ public class TextBox : MonoBehaviour
 
     public bool isLastBox;
     public static bool canFollow;
+    public static bool textBoxIsOpen;
     private void OnEnable()
     {
         Cursor.lockState = CursorLockMode.None;
@@ -30,6 +31,7 @@ public class TextBox : MonoBehaviour
         textBox.text = "";
         StartCoroutine(Type());
         canFollow = false;
+        textBoxIsOpen = true;
     }
        
     void Update()
@@ -90,10 +92,12 @@ public class TextBox : MonoBehaviour
         {
             UI.SetActive(true);
             canFollow = true;
+            textBoxIsOpen = false;
             Cursor.lockState = CursorLockMode.Locked;
         }
-        
+        Debug.Log(textBoxIsOpen);
         nextTextBox.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
+
     }
 }

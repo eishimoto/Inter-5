@@ -20,13 +20,12 @@ public class UIManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1;
         StartCoroutine(OpenTextBox());
-        isPausedGlobal = true;
+        isPausedGlobal = false;
     }
 
     void Update()
     {
         Pause();
-        Debug.Log(isPausedGlobal);
     }
 
     public void Pause()
@@ -49,6 +48,7 @@ public class UIManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             UI2.SetActive(false);
+            
             if(isPausedGlobal)
             {
                 isPausedGlobal = false;
